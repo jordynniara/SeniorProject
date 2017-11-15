@@ -1,11 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomMovement : Movement {
+    public void move()
+    {
 
-	// Use this for initialization
-	void Start () {
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
