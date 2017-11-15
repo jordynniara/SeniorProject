@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour {
+public class RandomMovement : Movement {
 
 	// Use this for initialization
 	void Start () {
