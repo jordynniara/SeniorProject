@@ -20,11 +20,11 @@ public class Entity {
     
     private boolean player;
     
-    public Entity(String id) {
+    public Entity(String id, float speed, String spriteName, boolean player) {
         this.id = id;
-        speed = 0.0f;
-        spriteName = new String();
-        player = false;
+        this.speed = speed;
+        this.spriteName = spriteName;
+        this.player = player;
     }
 
     /**

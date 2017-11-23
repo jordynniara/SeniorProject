@@ -28,6 +28,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MultipleSelectionModel;
 import javafx.scene.control.TextField;
@@ -49,6 +50,12 @@ public class AppModelMainController implements Initializable {
     private ListView<String> entityList;
     @FXML
     private TextField entityIDField;
+    @FXML
+    private TextField entitySpeedField;
+    @FXML
+    private TextField spriteNameField;
+    @FXML
+    private CheckBox isPlayerBox;
     @FXML
     private Button addEntityButton;
     @FXML
@@ -81,13 +88,22 @@ public class AppModelMainController implements Initializable {
         entityIDField.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
             examineID();
         });
+        entitySpeedField.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+            examineID();
+        });
+        spriteNameField.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
+            examineID();
+        });
 
     }
 
     @FXML
     protected void addEntity(ActionEvent event) {
         String id = entityIDField.getText().trim();
-        entities.put(id, new Entity(id));
+        float speed = Float.parseFloat(entitySpeedField.getText().trim());
+        String spriteName = spriteNameField.getText().trim();
+        boolean isPlayer = isPlayerBox.isSelected();
+        entities.put(id, new Entity(id, speed, spriteName, isPlayer));
         entityList.getItems().add(entityIDField.getText().trim());
         addEntityButton.setDisable(true);
         entityList.getSelectionModel().selectLast();
@@ -180,10 +196,7 @@ public class AppModelMainController implements Initializable {
                     }
                 }
                 jr.endObject();
-                Entity e = new Entity(id);
-                e.setSpriteName(spriteName);
-                e.setSpeed(speed);
-                e.setPlayer(player);
+                Entity e = new Entity(id, speed, spriteName, player);
                 System.out.println(gson.toJson(e));
                 loadedEntities.put(id, e);
                 loadedEntityList.add(id);
