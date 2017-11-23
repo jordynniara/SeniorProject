@@ -10,7 +10,7 @@ public class ModLoader : MonoBehaviour {
     public class EntityInfo
     {
 
-        public List<Entity> contents;
+        public List<Entity> entities;
     }
 
     public static EntityInfo data;
@@ -20,9 +20,9 @@ public class ModLoader : MonoBehaviour {
         StreamReader r = new StreamReader("abcd.txt");
         string contents = r.ReadToEnd();
         data = JsonUtility.FromJson<EntityInfo>(contents);
-        for (int i = 0; i < data.contents.Count; i++)
+        for (int i = 0; i < data.entities.Count; i++)
         {
-            Debug.Log(data.contents[i]);
+            Debug.Log(data.entities[i]);
         }
 	}
 	

@@ -116,6 +116,8 @@ public class AppModelMainController implements Initializable {
         }
 
         try (JsonWriter jw = gson.newJsonWriter(new PrintWriter(saveFile))) {
+            jw.beginObject();
+            jw.name("entities");
             jw.beginArray();
             entities.forEach((String s, Entity e) -> {
                 try {
@@ -130,6 +132,7 @@ public class AppModelMainController implements Initializable {
                 }
             });
             jw.endArray();
+            jw.endObject();
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(AppModelMainController.class.getName()).log(Level.SEVERE, null, ex);
@@ -157,7 +160,7 @@ public class AppModelMainController implements Initializable {
             boolean player = false;
             while (jr.hasNext()) {
                 jr.beginObject();
-                while(jr.hasNext()) {
+                while (jr.hasNext()) {
                     String name = jr.nextName();
                     switch (name) {
                         case "id":
@@ -167,7 +170,7 @@ public class AppModelMainController implements Initializable {
                             spriteName = jr.nextString();
                             break;
                         case "speed":
-                            speed = (float)jr.nextDouble();
+                            speed = (float) jr.nextDouble();
                             break;
                         case "isPlayer":
                             player = jr.nextBoolean();
