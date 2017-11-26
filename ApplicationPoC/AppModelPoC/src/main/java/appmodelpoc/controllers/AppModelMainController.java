@@ -88,12 +88,6 @@ public class AppModelMainController implements Initializable {
         entityIDField.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
             examineID();
         });
-        entitySpeedField.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
-            examineID();
-        });
-        spriteNameField.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
-            examineID();
-        });
 
     }
 
@@ -118,6 +112,7 @@ public class AppModelMainController implements Initializable {
             entities.remove(id);
         });
         entityList.getItems().removeAll(selectedItems);
+        examineID();
 
     }
 

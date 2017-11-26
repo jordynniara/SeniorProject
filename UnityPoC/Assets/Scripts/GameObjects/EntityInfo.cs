@@ -9,7 +9,7 @@ public struct Entity {
 
         public string id;
 
-        public double speed;
+        public float speed;
 
         public string spriteName;
 

@@ -5,8 +5,6 @@ using UnityEngine;
 //Basically just has a movement stuck to it
 public class EntityController : MonoBehaviour {
 
-    public Movement movement;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -14,6 +12,6 @@ public class EntityController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+    }
 }
