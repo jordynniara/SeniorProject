@@ -165,6 +165,8 @@ public class AppModelMainController implements Initializable {
         try (JsonReader jr = new JsonReader(new FileReader(loadFile))) {
             HashMap<String, Entity> loadedEntities = new HashMap<>();
             ObservableList<String> loadedEntityList = FXCollections.observableArrayList();
+            jr.beginObject();
+            String nextName = jr.nextName();
             jr.beginArray();
             String id = "", spriteName = "";
             float speed = 0.0f;
@@ -197,6 +199,7 @@ public class AppModelMainController implements Initializable {
                 loadedEntityList.add(id);
             }
             jr.endArray();
+            jr.endObject();
             entities = loadedEntities;
             entityList.setItems(loadedEntityList);
         } catch (IOException ex) {
