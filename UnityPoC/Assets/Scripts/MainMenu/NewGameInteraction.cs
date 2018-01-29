@@ -7,6 +7,6 @@ public class NewGameInteraction : MonoBehaviour {
     
     
 	void OnMouseUpAsButton () {
-        SceneManager.LoadScene("testScene");	
+        SceneManager.LoadScene("MainScene");	
 	}
 }
