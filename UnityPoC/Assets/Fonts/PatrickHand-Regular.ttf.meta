@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f78142f133a2343b98fc819b4373c603
-timeCreated: 1511227196
+guid: 7f6cb8d649a4d4800b72c2d5ac4bfc13
+timeCreated: 1517196122
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -9,9 +9,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Black Ops One
+  fontName: Patrick Hand
   fontNames:
-  - Black Ops One
+  - Patrick Hand
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
