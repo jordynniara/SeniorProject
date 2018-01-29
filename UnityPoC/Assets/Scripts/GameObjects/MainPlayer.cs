@@ -46,8 +46,8 @@ public class MainPlayer : MonoBehaviour, Movement{
     public void Fire()
     {
         // Create the Bullet from the Bullet Prefab
-        bullet = (GameObject)Instantiate (
-            bullet,
+        GameObject bullet = (GameObject)Instantiate (
+            this.bullet,
             transform.position,
             transform.rotation);
 
