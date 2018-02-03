@@ -77,18 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -110,8 +107,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &14760654
 Prefab:
@@ -454,7 +449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 223260286}
   - component: {fileID: 223260285}
-  - component: {fileID: 223260284}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -462,20 +456,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &223260284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 223260283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb68a371c5a145dbb063efece8348bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  pellet: {fileID: 0}
-  fireRate: 0.997
 --- !u!50 &223260285
 Rigidbody2D:
   serializedVersion: 4
@@ -1425,6 +1405,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114665903575123342, guid: 866b893fdd67d464ab1c984363d5bc21,
+        type: 2}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 866b893fdd67d464ab1c984363d5bc21, type: 2}
   m_IsPrefabParent: 0
@@ -1661,7 +1646,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1677,7 +1661,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2098,11 +2081,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!4 &1637907734
 Transform:
   m_ObjectHideFlags: 0
@@ -2384,6 +2367,8 @@ GameObject:
   - component: {fileID: 1987213616}
   - component: {fileID: 1987213615}
   - component: {fileID: 1987213614}
+  - component: {fileID: 1987213619}
+  - component: {fileID: 1987213618}
   m_Layer: 0
   m_Name: plr1
   m_TagString: Untagged
@@ -2402,8 +2387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769503dd11a924617ad6a13560009f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.5
-  bullet: {fileID: 1243496784928298, guid: 27b9e3243c3104ea6aa9ec2f324520f7, type: 2}
+  bullet: {fileID: 1987213618}
 --- !u!50 &1987213615
 Rigidbody2D:
   serializedVersion: 4
@@ -2433,7 +2417,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2449,7 +2432,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2481,6 +2463,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987213618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987213613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8c17e7ee648425f9ec29bc28ebdc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  bullet: {fileID: 1243496784928298, guid: 27b9e3243c3104ea6aa9ec2f324520f7, type: 2}
+--- !u!114 &1987213619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987213613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797e3511e9baa7547b3487983ef7121e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.5
 --- !u!4 &2104063136 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4460245992599784, guid: bafb934d5939740ffbb2eb765acecadc,

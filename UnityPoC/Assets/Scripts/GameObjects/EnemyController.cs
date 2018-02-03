@@ -7,25 +7,46 @@ public class EnemyController : MonoBehaviour {
 
 	private Transform enemies;
 	public float speed;
-
-	public GameObject pellet;
-	public float fireRate = 0.997f;
+    Vector3 finalPosition;
+    private float xpos;
+    private float timer;
+    public float timeToMove = 3;
+    public float timerSpeed = 1;
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("MoveEnemy", 0.1f, 0.3f);
+        xpos = Random.Range(-5, 5);
+        finalPosition = new Vector3(xpos, transform.position.y, transform.position.z);
 		enemies = GetComponent<Transform> ();
 	}
 
-	void MoveEnemy()
-	{
-		enemies.position += Vector3.right * speed;
+    private void Update()
+    {
+        timer += Time.deltaTime * timerSpeed;
+        if (timer >= timeToMove)
+        {
+            transform.position = Vector3.Lerp(transform.position, finalPosition, Time.deltaTime * speed);
+             if (Vector3.Distance(transform.position, finalPosition) <= 0.01f)
+            {
+                xpos = Random.Range(-4.5f, 4.5f);
+                finalPosition = new Vector3(xpos, transform.position.y, transform.position.z);
+                timer = 0.0f;
+            }
+        }
+    }
 
-		foreach (Transform enemy in enemies) {
-			if (enemy.position.x < -10.5 || enemy.position.x > 10.5) {
-				speed = -speed;
-				return;
-			}
-		}
+    void MoveEnemy()
+	{
+        
+         // Make the speed dependent on the distance to the targe
+        //Using for each causes game to slow down signficantly
+        //Need a better way to control bounds
+    	//foreach (Transform enemy in enemies) {
+    	//	if (enemy.position.x < -10.5 || enemy.position.x > 10.5) {
+    	//		speed = -speed;
+    	//		return;
+    	//	}
+    	//}
 	}
+
 }
