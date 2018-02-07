@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        xpos = Random.Range(-8, 8); //range on x-axis in which enemy can move
+        xpos = Random.Range(-5, 5); //range on x-axis in which enemy can move
         finalPosition = new Vector3(xpos, transform.position.y, transform.position.z); //final position - only moves along x-axis
 	}
 
@@ -46,6 +46,22 @@ public class EnemyController : MonoBehaviour {
         }
 	}
 
+    void OnCollisionEnter(Collision2D coll)
+    {
+        float force = 20f;
+        if (coll.gameObject.tag == "Player" || coll.gameObject.tag=="Enemy")
+        {
+            var rel = GetComponent<Rigidbody2D>().position - coll.rigidbody.position;
+            if (rel.y > 0.5f)
+            {
+                rel.y = 0; // If you don't want to push him upwards.
+                rel.Normalize();
+                GetComponent<Rigidbody2D>().AddForce(rel * force);
+            }
+        }
+    }
+
+    //when hit by pellet
     void Damage()
     {
         lives--;

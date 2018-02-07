@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 114052033828039464}
   - component: {fileID: 114266190940449684}
   - component: {fileID: 114818762648224460}
-  - component: {fileID: 50317670560978154}
   - component: {fileID: 61446212257366126}
+  - component: {fileID: 50317670560978154}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -54,7 +54,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1791134088738826}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0

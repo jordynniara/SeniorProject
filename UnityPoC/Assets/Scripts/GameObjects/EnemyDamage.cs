@@ -8,7 +8,9 @@ public class EnemyDamage : MonoBehaviour {
     {
         if (col.gameObject.tag == "Enemy")
         {
-            col.gameObject.SendMessage("Damage");
+            col.gameObject.SendMessage("Damage"); //Destroys enemey and reduces lives
+
+            Destroy(col.otherCollider.gameObject); //Destroys bullet
 
         }
     }

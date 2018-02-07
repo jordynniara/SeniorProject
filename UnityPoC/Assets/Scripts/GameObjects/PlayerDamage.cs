@@ -8,7 +8,9 @@ public class PlayerDamage : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            col.gameObject.SendMessage("Damage");
+            col.gameObject.SendMessage("Damage");//Destroys player and reduces lives
+
+            Destroy(col.otherCollider.gameObject); //Destroys bullet
 
         }
     }
