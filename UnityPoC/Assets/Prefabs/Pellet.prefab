@@ -21,9 +21,8 @@ GameObject:
   - component: {fileID: 4926838984384638}
   - component: {fileID: 212012599662622834}
   - component: {fileID: 50604136086275964}
-  - component: {fileID: 114109501777114452}
   - component: {fileID: 58519217568385884}
-  - component: {fileID: 114364958761720624}
+  - component: {fileID: 114117336777180888}
   m_Layer: 0
   m_Name: Pellet
   m_TagString: Untagged
@@ -79,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.06
---- !u!114 &114109501777114452
+--- !u!114 &114117336777180888
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -87,18 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243496784928298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924cd60d0ab574620b8b6abda83734e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114364958761720624
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1243496784928298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea650df889f804e31ba4be208d985945, type: 3}
+  m_Script: {fileID: 11500000, guid: f654518102758463a8c0bbb8868328c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212012599662622834
