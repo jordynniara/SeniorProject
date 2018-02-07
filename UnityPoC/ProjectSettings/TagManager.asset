@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainMenuText
   - ActionText
+  - Enemy
   layers:
   - Default
   - TransparentFX

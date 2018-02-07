@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainPlayer : MonoBehaviour{
     [SerializeField]
     private SingleShoot bullet;
+    private int  lives = 3;
 
     //initialization
 	void Start () {
@@ -19,5 +20,14 @@ public class MainPlayer : MonoBehaviour{
             bullet.fire(1);
         }
 	}
+
+    void Damage(){
+
+        lives--;
+        if (lives <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     
 }

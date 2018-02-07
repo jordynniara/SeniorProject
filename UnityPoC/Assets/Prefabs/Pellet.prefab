@@ -21,7 +21,9 @@ GameObject:
   - component: {fileID: 4926838984384638}
   - component: {fileID: 212012599662622834}
   - component: {fileID: 50604136086275964}
-  - component: {fileID: 61770541393422514}
+  - component: {fileID: 114109501777114452}
+  - component: {fileID: 58519217568385884}
+  - component: {fileID: 114364958761720624}
   m_Layer: 0
   m_Name: Pellet
   m_TagString: Untagged
@@ -62,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61770541393422514
-BoxCollider2D:
+--- !u!58 &58519217568385884
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -71,22 +73,34 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.12, y: 0.11}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12, y: 0.11}
-  m_EdgeRadius: 0
+  m_Radius: 0.06
+--- !u!114 &114109501777114452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243496784928298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924cd60d0ab574620b8b6abda83734e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114364958761720624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243496784928298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea650df889f804e31ba4be208d985945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212012599662622834
 SpriteRenderer:
   m_ObjectHideFlags: 1

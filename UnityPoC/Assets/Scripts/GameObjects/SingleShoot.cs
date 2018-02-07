@@ -5,9 +5,10 @@ using System;
 //Client class of Bullet. Single pellet style shooting
 public class SingleShoot : MonoBehaviour, Bullet
 {
-    public float speed;
+    [SerializeField]private float speed;
     public GameObject bullet;
 
+    //move bullet accross screen
     public void fire(int direction)
     {
         // Create the Bullet from the Bullet Prefab
@@ -21,4 +22,6 @@ public class SingleShoot : MonoBehaviour, Bullet
         // Destroy the bullet after 2 seconds
         Destroy(newBullet, 2.0f);
     }
+
+
 }
