@@ -1499,12 +1499,12 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114665903575123342, guid: 866b893fdd67d464ab1c984363d5bc21,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 866b893fdd67d464ab1c984363d5bc21, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1140754264 stripped
@@ -2532,11 +2532,10 @@ GameObject:
   - component: {fileID: 1987213616}
   - component: {fileID: 1987213615}
   - component: {fileID: 1987213614}
-  - component: {fileID: 1987213619}
   - component: {fileID: 1987213618}
   m_Layer: 0
-  m_Name: plr1
-  m_TagString: Untagged
+  m_Name: MainPlayer
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2552,7 +2551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769503dd11a924617ad6a13560009f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1987213618}
+  lives: 3
+  speed: 5
+  shootStyle: {fileID: 0}
 --- !u!50 &1987213615
 Rigidbody2D:
   serializedVersion: 4
@@ -2605,7 +2606,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5fb696d38fde04b52b0579f0ff539eb6, type: 3}
+  m_Sprite: {fileID: 21300068, guid: a6e6374f1e9c84a358f872b7bd58bc5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2623,7 +2624,7 @@ Transform:
   m_GameObject: {fileID: 1987213613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.254, y: -4.25, z: -4}
-  m_LocalScale: {x: 0.75461006, y: 0.85451555, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2639,20 +2640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8c17e7ee648425f9ec29bc28ebdc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  bullet: {fileID: 1243496784928298, guid: 27b9e3243c3104ea6aa9ec2f324520f7, type: 2}
---- !u!114 &1987213619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1987213613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 797e3511e9baa7547b3487983ef7121e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3.5
+  speed: 3
+  bullet: {fileID: 0}
 --- !u!4 &2104063136 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4460245992599784, guid: bafb934d5939740ffbb2eb765acecadc,

@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamage : MonoBehaviour {
+public class EnemyDamage : Damage {
+    private void Start()
+    {
+        target = "Enemy";
+    }
+
     //inflict damae
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == target)
         {
-            col.gameObject.SendMessage("Damage"); //Destroys enemey and reduces lives
+            col.gameObject.SendMessage("Damage");//Destroys player and reduces lives
 
             Destroy(col.otherCollider.gameObject); //Destroys bullet
 

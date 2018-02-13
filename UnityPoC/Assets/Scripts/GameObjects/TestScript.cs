@@ -34,12 +34,12 @@ public class TestScript : MonoBehaviour
                     {
                         Destroy(oldPlayer);
                     }
-                    newEntity.AddComponent<KeyboardMovement>().speed = entity.speed;
+                    //newEntity.AddComponent<KeyboardMovement>().speed = entity.speed;
                     newEntity.tag = "Player";
                 }
                 else
                 {
-                    newEntity.AddComponent<RandomMovement>().speed = entity.speed;
+                    //newEntity.AddComponent<RandomMovement>().speed = entity.speed;
                 }
 
             }

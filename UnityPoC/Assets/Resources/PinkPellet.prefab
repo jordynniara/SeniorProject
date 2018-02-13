@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212012599662622834}
   - component: {fileID: 50604136086275964}
   - component: {fileID: 58519217568385884}
-  - component: {fileID: 114117336777180888}
+  - component: {fileID: 114272585338118898}
   m_Layer: 0
-  m_Name: Pellet
-  m_TagString: Untagged
+  m_Name: PinkPellet
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.06
---- !u!114 &114117336777180888
+--- !u!114 &114272585338118898
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

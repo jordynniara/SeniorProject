@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212878922337524250}
   - component: {fileID: 50342081784039936}
   - component: {fileID: 58972395013884052}
-  - component: {fileID: 114459573102779304}
+  - component: {fileID: 114191859108445054}
   m_Layer: 0
-  m_Name: New Prefab
-  m_TagString: Untagged
+  m_Name: BluePellet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.075
---- !u!114 &114459573102779304
+--- !u!114 &114191859108445054
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

@@ -2,32 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainPlayer : MonoBehaviour{
-    [SerializeField]
-    private SingleShoot bullet;
-    private int  lives = 3;
+public class MainPlayer : Character{
 
     //initialization
 	void Start () {
-        bullet = GetComponent<SingleShoot>();
+        lives = 1;
+        isEnemy = false;
+
+        //set movement
+        movement = gameObject.AddComponent(typeof(KeyboardMovement)) as KeyboardMovement;
+
+        //set shooting style and bullet prefab
+        shootStyle =  gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
+        shootStyle.bullet = (GameObject)Instantiate(Resources.Load("PinkPellet"));
+        //set bullet speed
+        if (bulletSpeed > 0)
+            shootStyle.speed = bulletSpeed;
+
+        //set target for bullet to destroy
+        shootStyle.damage = gameObject.AddComponent(typeof(EnemyDamage)) as EnemyDamage;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //move the character
+        movement.move(speed);
+
         //for shooting bullets
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            bullet.fire(1);
+            shootStyle.fire(Shoot.SHOOT_UPWARD);
         }
 	}
-
-    void Damage(){
-
-        lives--;
-        if (lives <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
     
 }
