@@ -11,6 +11,12 @@ public class RandomMovement : MonoBehaviour, Movement {
     public float timerSpeed; //degree of  which to change frame rate
     public int spawnFreq; //frequency enemy spanws on screen
 
+    //screen boundaries- should not be hard coded
+    private const float MIN_Y = -4.30f;
+    private const float MAX_Y = 4.30f;
+    private const float MIN_X = -5.82f;
+    private const float MAX_X = 5.82f;
+
     // Use this for initialization
     void Start()
     {
@@ -23,7 +29,15 @@ public class RandomMovement : MonoBehaviour, Movement {
     // Update is called once per frame
     void Update()
     {
-        //move();
+        keepInBounds();
+    }
+
+    //keeps characters in bounds
+    public void keepInBounds(){
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(transform.position.x, MIN_X, MAX_X);
+        pos.y = Mathf.Clamp(transform.position.y, MIN_Y, MAX_Y);
+        transform.position = pos;
     }
 
     public void move(float speed)

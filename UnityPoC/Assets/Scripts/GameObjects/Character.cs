@@ -21,9 +21,5 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        
-    }
 
 }
