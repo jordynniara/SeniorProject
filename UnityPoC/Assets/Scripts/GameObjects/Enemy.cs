@@ -10,4 +10,14 @@ public abstract class Enemy : Character
         isEnemy = true;
         movement = gameObject.AddComponent(typeof(RandomMovement)) as RandomMovement;
     }
+
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        if(coll.collider.CompareTag("Enemy"))
+        {
+            //Vector3 pos = transform.position;
+            //pos.x *= -1;
+            //transform.position = pos;
+        }
+    }
 }

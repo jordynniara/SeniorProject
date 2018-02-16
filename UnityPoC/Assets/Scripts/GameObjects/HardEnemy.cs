@@ -31,6 +31,6 @@ public class HardEnemy : Enemy{
 	// Update is called once per frame
 	void Update () 
     {
-        movement.move(speed);	
+       movement.move(speed);	
 	}
 }
