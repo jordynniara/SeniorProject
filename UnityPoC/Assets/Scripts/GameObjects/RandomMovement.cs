@@ -53,4 +53,14 @@ public class RandomMovement : MonoBehaviour, Movement {
 
         rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
     }
+
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        if(coll.collider.tag == "Enemy"){
+            movement.x *= -1;
+            movement.y *= -1;
+            rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+        }
+            
+    }
 }

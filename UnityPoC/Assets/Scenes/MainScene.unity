@@ -2551,7 +2551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
-  speed: 0.3
+  speed: 5
   bulletSpeed: 5
   shootStyle: {fileID: 0}
 --- !u!50 &1987213615

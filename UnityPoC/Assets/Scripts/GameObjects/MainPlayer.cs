@@ -14,7 +14,7 @@ public class MainPlayer : Character{
 
         //set shooting style and bullet prefab
         shootStyle =  gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
-        shootStyle.bullet = (GameObject)Instantiate(Resources.Load("PinkPellet"));
+        shootStyle.bullet = (GameObject)Resources.Load("PinkPellet");
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;

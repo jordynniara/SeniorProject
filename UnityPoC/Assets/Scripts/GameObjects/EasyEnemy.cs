@@ -10,7 +10,7 @@ public class EasyEnemy : Enemy{
 
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
-        shootStyle.bullet = (GameObject)Instantiate(Resources.Load("BluePellet"));
+        shootStyle.bullet = (GameObject)Resources.Load("BluePellet");
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;
@@ -24,7 +24,7 @@ public class EasyEnemy : Enemy{
 
     //used for InvokeRepeating in Start()
     private void invokeFire()
-    {
+    {   
         shootStyle.fire(Shoot.SHOOT_DOWNWARD);
     }
 	
