@@ -7,6 +7,7 @@ public class MainPlayer : Character{
     //initialization
 	void Start () {
         lives = 1;
+		speed = PlayerPrefs.GetFloat ("speed");
         isEnemy = false;
 
         //set movement
