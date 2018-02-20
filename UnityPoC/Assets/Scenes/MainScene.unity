@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   speed: 5
-  bulletSpeed: 5
+  bulletSpeed: 10
   shootStyle: {fileID: 0}
 --- !u!50 &1987213615
 Rigidbody2D:
