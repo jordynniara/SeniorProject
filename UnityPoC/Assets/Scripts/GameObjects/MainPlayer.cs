@@ -14,7 +14,7 @@ public class MainPlayer : Character{
 
     //initialization
 	void Start () {
-        lives = 3;
+		lives = PlayerPrefs.GetInt ("lives");
 		speed = PlayerPrefs.GetFloat ("speed");
         livesText.text = "x " + lives;
         isEnemy = false;
