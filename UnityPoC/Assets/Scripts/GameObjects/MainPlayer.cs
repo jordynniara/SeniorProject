@@ -37,6 +37,8 @@ public class MainPlayer : Character{
 	void Update () {
         //move the character
         movement.move(speed);
+
+
         if (mercy)
         {
             mercyTimer -= Time.deltaTime;
