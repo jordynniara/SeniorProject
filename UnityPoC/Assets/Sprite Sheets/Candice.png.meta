@@ -1,45 +1,38 @@
 fileFormatVersion: 2
-guid: a6e6374f1e9c84a358f872b7bd58bc5e
-timeCreated: 1518381500
+guid: 379b3e971f59141809487f992d094002
+timeCreated: 1519406278
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: candice_sprite_sheet_0
-    21300002: candice_sprite_sheet_1
-    21300004: candice_sprite_sheet_2
-    21300006: candice_sprite_sheet_3
-    21300008: candice_sprite_sheet_4
-    21300010: candice_sprite_sheet_5
-    21300012: candice_sprite_sheet_6
-    21300014: candice_sprite_sheet_7
-    21300016: candice_sprite_sheet_8
-    21300018: candice_sprite_sheet_9
-    21300020: candice_sprite_sheet_10
-    21300022: candice_sprite_sheet_11
-    21300024: candice_sprite_sheet_12
-    21300026: candice_sprite_sheet_13
-    21300028: candice_sprite_sheet_14
-    21300030: candice_sprite_sheet_15
-    21300032: candice_sprite_sheet_16
-    21300034: candice_sprite_sheet_17
-    21300036: candice_sprite_sheet_18
-    21300038: candice_sprite_sheet_19
-    21300040: candice_sprite_sheet_20
-    21300042: candice_sprite_sheet_21
-    21300044: candice_sprite_sheet_22
-    21300046: candice_sprite_sheet_23
-    21300048: candice_sprite_sheet_24
-    21300050: candice_sprite_sheet_25
-    21300052: candice_sprite_sheet_26
-    21300054: candice_sprite_sheet_27
-    21300056: candice_sprite_sheet_28
-    21300058: candice_sprite_sheet_29
-    21300060: candice_sprite_sheet_30
-    21300062: candice_sprite_sheet_31
-    21300064: candice_sprite_sheet_32
-    21300066: candice_sprite_sheet_33
-    21300068: candice_sprite_sheet_34
-    21300070: candice_sprite_sheet_35
+    21300000: Candice_0
+    21300002: Candice_1
+    21300004: Candice_2
+    21300006: Candice_3
+    21300008: Candice_4
+    21300010: Candice_5
+    21300012: Candice_6
+    21300014: Candice_7
+    21300016: Candice_8
+    21300018: Candice_9
+    21300020: Candice_10
+    21300022: Candice_11
+    21300024: Candice_12
+    21300026: Candice_13
+    21300028: Candice_14
+    21300030: Candice_15
+    21300032: Candice_16
+    21300034: Candice_17
+    21300036: Candice_18
+    21300038: Candice_19
+    21300040: Candice_20
+    21300042: Candice_21
+    21300044: Candice_22
+    21300046: Candice_23
+    21300048: Candice_24
+    21300050: Candice_25
+    21300052: Candice_26
+    21300054: Candice_27
+    21300056: Candice_28
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -111,505 +104,407 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: candice_sprite_sheet_0
+      name: Candice_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 184
-        width: 30
-        height: 45
+        x: 6
+        y: 186
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_1
+      name: Candice_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 184
-        width: 30
-        height: 45
+        x: 38
+        y: 186
+        width: 27
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_2
+      name: Candice_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 184
-        width: 30
-        height: 45
+        x: 102
+        y: 186
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_3
+      name: Candice_3
       rect:
         serializedVersion: 2
-        x: 98
-        y: 184
-        width: 30
-        height: 45
+        x: 134
+        y: 190
+        width: 26
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_4
+      name: Candice_4
       rect:
         serializedVersion: 2
-        x: 130
-        y: 184
-        width: 30
-        height: 45
+        x: 166
+        y: 186
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 184
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_6
+      name: Candice_5
       rect:
         serializedVersion: 2
         x: 194
-        y: 184
-        width: 30
-        height: 45
+        y: 186
+        width: 28
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_7
+      name: Candice_6
       rect:
         serializedVersion: 2
         x: 226
-        y: 184
-        width: 30
-        height: 45
+        y: 188
+        width: 28
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_8
+      name: Candice_7
       rect:
         serializedVersion: 2
         x: 258
-        y: 184
-        width: 30
-        height: 45
+        y: 190
+        width: 28
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_9
+      name: Candice_8
       rect:
         serializedVersion: 2
-        x: 2
-        y: 137
-        width: 30
-        height: 45
+        x: 6
+        y: 138
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_10
+      name: Candice_9
       rect:
         serializedVersion: 2
-        x: 34
-        y: 137
-        width: 30
-        height: 45
+        x: 38
+        y: 140
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_11
+      name: Candice_10
       rect:
         serializedVersion: 2
-        x: 66
-        y: 137
-        width: 30
-        height: 45
+        x: 70
+        y: 138
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_12
+      name: Candice_11
       rect:
         serializedVersion: 2
-        x: 98
-        y: 137
-        width: 30
-        height: 45
+        x: 102
+        y: 138
+        width: 27
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_13
+      name: Candice_12
       rect:
         serializedVersion: 2
-        x: 130
-        y: 137
-        width: 30
-        height: 45
+        x: 134
+        y: 140
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_14
+      name: Candice_13
       rect:
         serializedVersion: 2
-        x: 162
-        y: 137
-        width: 30
-        height: 45
+        x: 166
+        y: 138
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_15
+      name: Candice_14
       rect:
         serializedVersion: 2
         x: 194
-        y: 137
-        width: 30
-        height: 45
+        y: 138
+        width: 26
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_16
+      name: Candice_15
       rect:
         serializedVersion: 2
         x: 226
-        y: 137
-        width: 30
-        height: 45
+        y: 140
+        width: 26
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_17
+      name: Candice_16
       rect:
         serializedVersion: 2
         x: 258
-        y: 137
-        width: 30
-        height: 45
+        y: 144
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_18
+      name: Candice_17
       rect:
         serializedVersion: 2
-        x: 2
-        y: 90
-        width: 30
-        height: 45
+        x: 4
+        y: 92
+        width: 27
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_19
+      name: Candice_18
       rect:
         serializedVersion: 2
-        x: 34
-        y: 90
-        width: 30
-        height: 45
+        x: 36
+        y: 92
+        width: 26
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_20
+      name: Candice_19
       rect:
         serializedVersion: 2
-        x: 66
+        x: 68
         y: 90
-        width: 30
-        height: 45
+        width: 26
+        height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_21
+      name: Candice_20
       rect:
         serializedVersion: 2
-        x: 98
-        y: 90
-        width: 30
-        height: 45
+        x: 100
+        y: 91
+        width: 28
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_22
+      name: Candice_21
       rect:
         serializedVersion: 2
-        x: 130
+        x: 132
         y: 90
-        width: 30
-        height: 45
+        width: 28
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_23
+      name: Candice_22
       rect:
         serializedVersion: 2
-        x: 162
+        x: 164
         y: 90
-        width: 30
-        height: 45
+        width: 28
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_24
+      name: Candice_23
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 90
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Candice_24
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 92
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Candice_25
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 96
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Candice_26
       rect:
         serializedVersion: 2
         x: 194
-        y: 90
-        width: 30
-        height: 45
+        y: 42
+        width: 28
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_25
+      name: Candice_27
       rect:
         serializedVersion: 2
         x: 226
-        y: 90
-        width: 30
-        height: 45
+        y: 44
+        width: 28
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: candice_sprite_sheet_26
+      name: Candice_28
       rect:
         serializedVersion: 2
         x: 258
-        y: 90
-        width: 30
-        height: 45
+        y: 45
+        width: 28
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_27
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_28
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_29
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_30
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_31
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_32
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_33
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_34
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: candice_sprite_sheet_35
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 43
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

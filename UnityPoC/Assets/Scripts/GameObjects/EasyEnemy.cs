@@ -10,7 +10,7 @@ public class EasyEnemy : Enemy{
 
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
-        shootStyle.bullet = (GameObject)Resources.Load("BluePellet");
+        shootStyle.bullet = (GameObject)Resources.Load("Beer");
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;
@@ -32,5 +32,8 @@ public class EasyEnemy : Enemy{
 	void Update () 
     {
         movement.move(speed);
+
+        SpareMe();
+
     }
 }

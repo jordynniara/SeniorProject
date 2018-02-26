@@ -6,11 +6,7 @@ using UnityEngine.UI;
 
 public class MainPlayer : Character{
 
-    private float mercyTimer = 0.0f;
-    private float blinkTimer = 0.0f;
-    private bool mercy = false;
-    private bool blink = false;
-    public Text livesText;
+    public Text livesText;  //text on screen showing lives left
 
     //initialization
 	void Start () {
@@ -24,13 +20,15 @@ public class MainPlayer : Character{
 
         //set shooting style and bullet prefab
         shootStyle =  gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
-        shootStyle.bullet = (GameObject)Resources.Load("PinkPellet");
+        shootStyle.bullet = (GameObject)Resources.Load("Snake");
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;
 
         //set target for bullet to destroy
         shootStyle.damage = gameObject.AddComponent(typeof(EnemyDamage)) as EnemyDamage;
+
+        print("lives" + lives);
 	}
 	
 	// Update is called once per frame
@@ -38,23 +36,9 @@ public class MainPlayer : Character{
         //move the character
         movement.move(speed);
 
+        //Blink if hit a
+        SpareMe();
 
-        if (mercy)
-        {
-            mercyTimer -= Time.deltaTime;
-            blinkTimer -= Time.deltaTime;
-            
-            if (mercyTimer <= 0.0f) {
-                mercy = false;
-                blink = false;
-            }
-            else if (blinkTimer <= 0.0f)
-            {
-                blink = !blink;
-                blinkTimer = 0.25f;
-            }
-            GetComponent<SpriteRenderer>().enabled = !blink;
-        }
         //for shooting bullets
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -64,19 +48,14 @@ public class MainPlayer : Character{
 
     public new void Damage()
     {
-        if (!mercy)
-        {
             base.Damage();
             livesText.text = "x " + lives;
+
             if (lives == 0)
             {
 
                 SceneManager.LoadScene("MainMenu");
             }
-            mercy = true;
-            mercyTimer = 2.0f;
-            blinkTimer = 0.25f;
-        }
     }
 
 }

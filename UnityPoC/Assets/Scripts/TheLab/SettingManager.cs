@@ -16,7 +16,7 @@ public class SettingManager : MonoBehaviour {
 	public GameSettings gameSettings;
 
 	void OnEnable() {
-		gameSettings = new GameSettings ();
+        gameSettings = gameObject.AddComponent(typeof(GameSettings)) as GameSettings;;
 
 		speedDropdown.onValueChanged.AddListener (delegate { OnSpeedChange (); });
 		shootStyleDropdown.onValueChanged.AddListener (delegate { OnShootStyleChange (); });

@@ -10,7 +10,15 @@ public class HardEnemy : Enemy{
 
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
-        shootStyle.bullet = (GameObject)Resources.Load("BluePellet");
+
+        if(this.name.Contains("Enemy2A"))
+        {
+            shootStyle.bullet = (GameObject)Resources.Load("Assignment");
+        }else if(name.Contains(("Enemy2B")))
+        {
+            shootStyle.bullet = (GameObject)Resources.Load("Fees");
+        }
+
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;
@@ -32,5 +40,6 @@ public class HardEnemy : Enemy{
 	void Update () 
     {
        movement.move(speed);	
+        SpareMe();
 	}
 }
