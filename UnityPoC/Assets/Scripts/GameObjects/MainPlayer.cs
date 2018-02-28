@@ -10,8 +10,11 @@ public class MainPlayer : Character{
 
     //initialization
 	void Start () {
-		lives = PlayerPrefs.GetInt ("lives");
-		speed = PlayerPrefs.GetFloat ("speed");
+        if (PlayerPrefs.GetInt("modding") == 1)
+        {
+            lives = PlayerPrefs.GetInt("lives");
+            speed = PlayerPrefs.GetFloat("speed");
+        }
         livesText.text = "x " + lives;
         isEnemy = false;
 

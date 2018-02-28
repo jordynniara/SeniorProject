@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 
-
 	void OnMouseUp(){
 		//give action for buttons on mouse click	
 	} 
