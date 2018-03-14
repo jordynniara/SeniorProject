@@ -37,14 +37,6 @@ public class LevelManager : MonoBehaviour {
         }
 	}
 
-    void chooseEnemies()
-    {
-        if(lvlNum<5)
-        {
-            lvlObject.enemies.Add();
-        }
-
-    }
 
     void TransitionLevel()
     {

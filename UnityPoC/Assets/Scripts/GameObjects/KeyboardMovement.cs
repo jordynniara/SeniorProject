@@ -41,10 +41,9 @@ public class KeyboardMovement : MonoBehaviour, Movement{
         //print(pos);
     }
 
-    // Use this for initialization
-    void Start () {
-        
-	}
+    void Start()
+    {
+    }
 	
 	// Update is called once per frame
 	void Update () {
