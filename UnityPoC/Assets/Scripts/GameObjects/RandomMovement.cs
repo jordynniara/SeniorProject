@@ -7,9 +7,9 @@ public class RandomMovement : MonoBehaviour, Movement {
     public float timeToMove;
     public int spawnFreq; //frequency enemy spanws on screen
 
-    //screen boundaries- should not be hard coded
+    //screen boundaries
     private const float MIN_Y = 0;
-    private const float MAX_Y = 4.30f;
+    private const float MAX_Y = 4.32f;
     private const float MIN_X = -5.82f;
     private const float MAX_X = 5.82f;
 

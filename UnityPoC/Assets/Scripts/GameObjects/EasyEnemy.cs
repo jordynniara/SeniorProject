@@ -8,6 +8,8 @@ public class EasyEnemy : Enemy{
 	 void Start () {
         base.initEnemy();
 
+        spawnRate = 3f;
+
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
         shootStyle.bullet = (GameObject)Resources.Load("Beer");
@@ -17,7 +19,7 @@ public class EasyEnemy : Enemy{
         //set target for bullet to destroy
         shootStyle.damage = gameObject.AddComponent(typeof(PlayerDamage)) as PlayerDamage;
         //Enemy shoot bullet repeatedly
-        InvokeRepeating("invokeFire", Random.Range(3, 11), Random.Range(5, 21));
+        InvokeRepeating("invokeFire", Random.Range(1, 3), Random.Range(3, 5));
 
         //set spawnFreq to medium number
     }

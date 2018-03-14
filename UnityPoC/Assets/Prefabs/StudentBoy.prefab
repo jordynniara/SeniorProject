@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 50484353280728832}
   - component: {fileID: 61560363918063802}
   - component: {fileID: 114412745010904164}
+  - component: {fileID: 114253580634391930}
   m_Layer: 0
   m_Name: StudentBoy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1062689225480404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,15 +80,35 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.12, y: 0.16}
+    oldSize: {x: 0.8, y: 1.0666667}
     newSize: {x: 0.12, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114253580634391930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062689225480404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05178166c5e4847ce895f08382ab5394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
+  waitingForNextSpawn: 1
+  countdown: 1
+  xMin: -5.82
+  xMax: 5.82
+  yMin: 0
+  yMax: 4.3
+  spawnLimit: 15
+  numSpawned: 0
 --- !u!114 &114412745010904164
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,13 +8,15 @@ public class HardEnemy : Enemy{
     {
         base.initEnemy();
 
+        spawnRate = 10f; //initial rate
+
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
 
-        if(this.name.Contains("Enemy2A"))
+        if(this.name.Contains("Professor"))
         {
             shootStyle.bullet = (GameObject)Resources.Load("Assignment");
-        }else if(name.Contains(("Enemy2B")))
+        }else if(name.Contains(("Admin")))
         {
             shootStyle.bullet = (GameObject)Resources.Load("Fees");
         }
@@ -25,7 +27,7 @@ public class HardEnemy : Enemy{
         //set target for bullet to destroy
         shootStyle.damage = gameObject.AddComponent(typeof(PlayerDamage)) as PlayerDamage;
         //Enemy shoot bullet repeatedly
-        InvokeRepeating("invokeFire", Random.Range(3, 11), Random.Range(5, 21));
+        InvokeRepeating("invokeFire", Random.Range(1, 3), Random.Range(3, 5));
 
         //set spawnFreq to medium number
     }

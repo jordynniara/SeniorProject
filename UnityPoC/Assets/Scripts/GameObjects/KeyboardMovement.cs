@@ -36,7 +36,7 @@ public class KeyboardMovement : MonoBehaviour, Movement{
     {
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(transform.position.x, MIN_X, MAX_X);
-        pos.y = Mathf.Clamp(transform.position.y, MIN_Y, 0); //MaxY=0 to keep character from moving past enemies
+        pos.y = Mathf.Clamp(transform.position.y, MIN_Y, MAX_Y); //MaxY=0 to keep character from moving past enemies
         transform.position = pos;
         //print(pos);
     }
