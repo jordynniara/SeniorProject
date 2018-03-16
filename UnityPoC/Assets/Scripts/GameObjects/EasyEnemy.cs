@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EasyEnemy : Enemy{
 
+
 	// Use this for initialization
 	 void Start () {
         base.initEnemy();

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 
 //Client class of Shoot. Double pellet style shooting
 public class DoubleShoot : Shoot

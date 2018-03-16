@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyDamage : Damage {
+
     private void Start()
     {
         target = "Enemy";

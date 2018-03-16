@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HardEnemy : Enemy{
 
+
     void Start()
     {
         base.initEnemy();

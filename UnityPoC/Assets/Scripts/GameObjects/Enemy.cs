@@ -4,8 +4,10 @@ using UnityEngine;
 
 public abstract class Enemy : Character
 {
-    public float spawnRate; //rate at which enemy type is spawned - increases w/ level
+    public float spawnRate; //rate at which enemy type is spawned - increases w/ level 
     //initialization
+	public int scoreValue = 0;
+
     public void initEnemy()
     {
         isEnemy = true;
@@ -15,7 +17,9 @@ public abstract class Enemy : Character
     public void Damage()
     {
         base.Damage();
-        if(lives==0)
-            Level.numEnemies--;
+		if (lives == 0) {
+			Level.numEnemies--;
+			Score.score += scoreValue;
+		}
     }
 }
