@@ -103,13 +103,6 @@ MonoBehaviour:
   speed: 2
   bulletSpeed: 7
   shootStyle: {fileID: 0}
-<<<<<<< HEAD
-  spawn: {fileID: 0}
-  nextSpawn: 0
-  spawnRate: 0
-  minSpawnRate: 0
-=======
-  spawnRate: 0
   scoreValue: 20
 >>>>>>> e7a2049c5f6908187b1abcf42437694535e4848a
 --- !u!212 &212717900380490820

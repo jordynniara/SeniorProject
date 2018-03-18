@@ -103,15 +103,7 @@ MonoBehaviour:
   speed: 2
   bulletSpeed: 10
   shootStyle: {fileID: 0}
-<<<<<<< HEAD
-  spawn: {fileID: 0}
-  nextSpawn: 0
-  spawnRate: 0
-  minSpawnRate: 0
-=======
-  spawnRate: 0
   scoreValue: 30
->>>>>>> e7a2049c5f6908187b1abcf42437694535e4848a
 --- !u!212 &212484089479657524
 SpriteRenderer:
   m_ObjectHideFlags: 1
