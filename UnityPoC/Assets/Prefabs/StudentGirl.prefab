@@ -103,6 +103,15 @@ MonoBehaviour:
   speed: 2
   bulletSpeed: 5
   shootStyle: {fileID: 0}
+<<<<<<< HEAD
+  spawn: {fileID: 0}
+  nextSpawn: 0
+  spawnRate: 0
+  minSpawnRate: 0
+=======
+  spawnRate: 0
+  scoreValue: 10
+>>>>>>> e7a2049c5f6908187b1abcf42437694535e4848a
 --- !u!212 &212260485747295044
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,6 +121,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -127,6 +137,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

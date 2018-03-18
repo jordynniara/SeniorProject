@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public abstract class Character : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public abstract class Character : MonoBehaviour
             if (lives == 0)
             {
                 Destroy(gameObject);
+				//SceneManager.LoadScene("EndScene");
             }
 
             mercy = true;

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class MainPlayer : Character{
 
     public Text livesText;  //text on screen showing lives left
+	public Text scoreText;
+	public GameEnder gameEnder;
 
     //initialization
 	void Start () {
@@ -51,14 +53,17 @@ public class MainPlayer : Character{
 
     public new void Damage()
     {
-            base.Damage();
-            livesText.text = "x " + lives;
+		base.Damage();
+        livesText.text = "x " + lives;
 
-            if (lives == 0)
-            {
-
-                SceneManager.LoadScene("MainMenu");
-            }
+        if (lives == 0)
+        {
+			gameEnder.EndGame ();
+	        scoreText.transform.position = new Vector3(0, 0, scoreText.transform.position.z);
+			scoreText.fontSize = 300;
+			scoreText.alignment = TextAnchor.MiddleCenter;
+		}
     }
+
 
 }

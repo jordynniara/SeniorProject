@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-using UnityEditor;
+//using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class SettingManager : MonoBehaviour {

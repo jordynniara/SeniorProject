@@ -4,59 +4,65 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
-    public Level lvlObject;
-    public int lvlNum;
-
+    //delay between level ending and spawning
     public float lvlStartDelay = 3f;
 
+    //label that is displayed between levels
     public GameObject lvlLabel;
 
+    //flag on whether or not level is running
+    //Note: Level can be running while spawning is not
+    public static bool levelRunning;
 	
 	void Start () {
-        //don't start spawning yet
-        lvlObject.isEnabled = false;
         //get the label
         lvlLabel = GameObject.Find("LevelText");
-        lvlNum = 0;
+        Spawn.lvlNum = 0;
+        levelRunning = false;
 
         TransitionLevel();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //if reached max waves per level
-        if(Level.waveCount >= Level.totNumWaves)
+        
+        //transition the level if level isn't running
+        if(!levelRunning)
         {
-            //disable spawning
-            lvlObject.isEnabled = false;
-
-            //if all enemies cleared
-            if(Level.numEnemies ==0)
-                //go to next level
-                TransitionLevel();
+            TransitionLevel();
         }
+
 	}
 
 
     void TransitionLevel()
     {
+        //disable spawning
+        Spawn.spawnEnabled = false;
+
         //increase level number
-        lvlNum++;
+        Spawn.lvlNum++;
+
         //display label
-        lvlLabel.GetComponent<TextMesh>().text = "LEVEL" + lvlNum;
+        lvlLabel.GetComponent<TextMesh>().text = "LEVEL" + Spawn.lvlNum;
         lvlLabel.SetActive(true);
 
-        //start next level after some delay
+        //set level running again
+        levelRunning = true;
+        //start spawning and hide label after some delay
         Invoke("HideLevelLable", lvlStartDelay);
 
-        //reset wave count
-        Level.waveCount = 0;
+
+        //reset destroyed count
+        Spawn.numEnemiesDestroyed = 0;
     }
 
     void HideLevelLable(){
         //remove label
         lvlLabel.SetActive(false);
-        //start level
-        lvlObject.isEnabled = true;
+        //Reset spawned count
+        Spawn.numEnemiesSpawned = 0;
+        //start spawning
+        Spawn.spawnEnabled = true;
     }
 }

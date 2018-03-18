@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class EasyEnemy : Enemy{
 
+
 	// Use this for initialization
 	 void Start () {
         base.initEnemy();
-
-        spawnRate = 3f;
 
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
@@ -21,7 +20,6 @@ public class EasyEnemy : Enemy{
         //Enemy shoot bullet repeatedly
         InvokeRepeating("invokeFire", Random.Range(1, 3), Random.Range(3, 5));
 
-        //set spawnFreq to medium number
     }
 
     //used for InvokeRepeating in Start()
@@ -36,6 +34,5 @@ public class EasyEnemy : Enemy{
         movement.move(speed);
 
         SpareMe();
-
     }
 }

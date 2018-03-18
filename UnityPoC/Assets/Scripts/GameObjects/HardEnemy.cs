@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class HardEnemy : Enemy{
 
+
     void Start()
     {
         base.initEnemy();
-
-        spawnRate = 10f; //initial rate
 
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
@@ -28,8 +27,6 @@ public class HardEnemy : Enemy{
         shootStyle.damage = gameObject.AddComponent(typeof(PlayerDamage)) as PlayerDamage;
         //Enemy shoot bullet repeatedly
         InvokeRepeating("invokeFire", Random.Range(1, 3), Random.Range(3, 5));
-
-        //set spawnFreq to medium number
     }
 
     //used for InvokeRepeating in Start()
@@ -41,7 +38,8 @@ public class HardEnemy : Enemy{
 	// Update is called once per frame
 	void Update () 
     {
-       movement.move(speed);	
+        movement.move(speed);	
+
         SpareMe();
 	}
 }
