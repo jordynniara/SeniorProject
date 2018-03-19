@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class NewGameInteraction : MonoBehaviour {
 
-
+    public AudioSource audio;
     void OnMouseUpAsButton()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("GameBoard");
+        audio.Play();
         SetDefaultSettings();
 	}
 

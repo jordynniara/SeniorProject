@@ -7,8 +7,7 @@ public class LevelManager : MonoBehaviour {
     //delay between level ending and spawning
     public float lvlStartDelay = 3f;
 
-    //label that is displayed between levels
-    public GameObject lvlLabel;
+    public GameObject lvlLabel; //text on screen showing level number
 
     //flag on whether or not level is running
     //Note: Level can be running while spawning is not
@@ -17,9 +16,14 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
         //get the label
         lvlLabel = GameObject.Find("LevelText");
+
+        //init level number
         Spawn.lvlNum = 0;
+
+        //level isn't running at game start
         levelRunning = false;
 
+        //start level
         TransitionLevel();
 	}
 	
@@ -31,7 +35,6 @@ public class LevelManager : MonoBehaviour {
         {
             TransitionLevel();
         }
-
 	}
 
 

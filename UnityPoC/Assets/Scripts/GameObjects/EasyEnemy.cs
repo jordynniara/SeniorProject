@@ -12,14 +12,16 @@ public class EasyEnemy : Enemy{
         //set shooting style and bullet prefab
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
         shootStyle.bullet = (GameObject)Resources.Load("Beer");
+
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;
+        
         //set target for bullet to destroy
         shootStyle.damage = gameObject.AddComponent(typeof(PlayerDamage)) as PlayerDamage;
+
         //Enemy shoot bullet repeatedly
         InvokeRepeating("invokeFire", Random.Range(1, 3), Random.Range(3, 5));
-
     }
 
     //used for InvokeRepeating in Start()

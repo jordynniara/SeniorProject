@@ -19,8 +19,8 @@ public class Spawn : MonoBehaviour
 
 
     // the range of X enemies will be spawned
-    private float xMin = -5.82f;
-    private float xMax = 5.82f;
+    private float xMin = -8f;
+    private float xMax = 8f;
 
     // the range of y enemies will be spawned
     private float yMin = 0f;
@@ -34,28 +34,24 @@ public class Spawn : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             return;
         }
-
-        foreach (GameObject enemy in prefabs)
+        if (Time.time >= nextSpawn) //If ready to spawn
         {
-            if (Time.time >= nextSpawn) //If ready to spawn
-            {
-                // Defines the min and max ranges for x and y
-                Vector2 pos = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
+            // Defines the min and max ranges for x and y
+            Vector2 pos = new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax));
 
-                // Creates the random object at the random position
-                Instantiate(enemy).transform.position = pos;
-                nextSpawn += spawnRate; //Set next spawn time
-                numEnemiesSpawned++;
-            }
+            // Creates the random object at the random position
+            Instantiate(prefabs[Random.Range(0, prefabs.Count)]).transform.position = pos;
+            nextSpawn += spawnRate; //Set next spawn time
+            numEnemiesSpawned++;
         }
 
     }
 
-    public void SetSpawnInterval()
+    public void DecreaseSpawnInterval()
     {
 
         if (spawnRate > minSpawnRate) //Change spawn rate to 3/4ths what it was
-            spawnRate *= 0.75f;
+            spawnRate *= 0.25f;
         else //Make sure spawn rate stays above minimum
             spawnRate = minSpawnRate;
     }
@@ -80,9 +76,9 @@ public class Spawn : MonoBehaviour
                 LevelManager.levelRunning = false;
 
             //Decrease spawn rate after every levels
-            if (lvlNum % 3 == 0)
+            if (lvlNum % 1 == 0)
             {
-                SetSpawnInterval();
+                DecreaseSpawnInterval();
             }
         }
     }

@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadGameInteraction : MonoBehaviour {
-
+    public AudioSource audio;
 	void OnMouseUpAsButton () {
-		SceneManager.LoadScene("TheLab");	
+		SceneManager.LoadScene("TheLab");
+        audio.Play();
 	}
 
 }

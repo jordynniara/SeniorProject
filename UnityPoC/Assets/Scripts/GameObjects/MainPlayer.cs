@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainPlayer : Character{
+public class MainPlayer : Character
+{
 
-    public Text livesText;  //text on screen showing lives left
-	public Text scoreText;
-	public GameEnder gameEnder;
+
+    private GameObject livesText;  //text on screen showing lives left
+    [SerializeField]
+	private GameObject scoreText;
+    [SerializeField]
+    private GameEnder gameEnder;
 
     //initialization
 	void Start () {
@@ -17,7 +21,14 @@ public class MainPlayer : Character{
             lives = PlayerPrefs.GetInt("lives");
             speed = PlayerPrefs.GetFloat("speed");
         }
-        livesText.text = "x " + lives;
+
+        scoreText = GameObject.Find("Score");
+        livesText = GameObject.Find("Lives");
+
+        //set lives text
+        livesText.GetComponent<TextMesh>().text = "x" + lives; 
+
+        //livesText.text = "x " + lives;
         isEnemy = false;
 
         //set movement
@@ -26,6 +37,7 @@ public class MainPlayer : Character{
         //set shooting style and bullet prefab
         shootStyle =  gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
         shootStyle.bullet = (GameObject)Resources.Load("Snake");
+
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;
@@ -51,17 +63,19 @@ public class MainPlayer : Character{
         }
 	}
 
+
+
+
     public new void Damage()
     {
 		base.Damage();
-        livesText.text = "x " + lives;
+        livesText.GetComponent<TextMesh>().text = "x" + lives; 
 
         if (lives == 0)
         {
+            GameEnder.gameOver = true;
 			gameEnder.EndGame ();
-	        scoreText.transform.position = new Vector3(0, 0, scoreText.transform.position.z);
-			scoreText.fontSize = 300;
-			scoreText.alignment = TextAnchor.MiddleCenter;
+            scoreText.GetComponent<Score>().DisplayScore();
 		}
     }
 

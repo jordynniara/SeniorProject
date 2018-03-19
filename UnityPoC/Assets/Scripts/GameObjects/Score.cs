@@ -6,21 +6,29 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour {
 
 	public static int score = 0;
-	public Text scoreLabel;
+	//public Text scoreLabel;
 
 	//public float scoreDelay = 3f;
 
-	public GameObject scoreObject;
+	//public GameObject scoreObject;
 
 	// Use this for initialization
 	void Awake () {
-		scoreLabel = GetComponent<Text>();
+        //scoreObject = GameObject.Find("Score");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		scoreLabel.text = "Score: " + score;
+		this.GetComponent<TextMesh>().text = "Score: " + score;
 	}
+
+    public void DisplayScore()
+    {
+        this.GetComponent<TextMesh>().anchor = TextAnchor.MiddleCenter;
+        this.transform.position = new Vector3(0, 2, this.transform.position.z);
+        this.GetComponent<TextMesh>().characterSize = 2;
+        this.GetComponent<TextMesh>().alignment = TextAlignment.Center;
+    }
 
 //	void DisplayScore() {
 //		scoreObject = scoreLabel;

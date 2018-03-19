@@ -7,7 +7,7 @@ public class PlayAgain : MonoBehaviour {
 
 	void OnMouseUpAsButton()
 	{
-		SceneManager.LoadScene("MainScene");
+		SceneManager.LoadScene("GameBoard");
 		SetDefaultSettings();
 	}
 
