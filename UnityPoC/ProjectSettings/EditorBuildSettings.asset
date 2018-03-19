@@ -5,14 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+  - enabled: 0
+    path: 
     guid: 2b360c5eaf42a415dbd6cb7bafc08db8
   - enabled: 0
-    path: Assets/Scenes/testScene.unity
+    path: 
     guid: 7dcc19a79dbc3e043a59519c8140c62d
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/GameBoard.unity
     guid: 7ab5a4af722494fa7a5dbc9cc863cdd7
   - enabled: 1
     path: Assets/Scenes/TheLab.unity
@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 379359d68add445f6bddba7b9c86baaa
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: dc08fbeae3a6d4184a1ae08d1fb2c1d2
