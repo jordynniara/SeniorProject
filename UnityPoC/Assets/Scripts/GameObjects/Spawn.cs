@@ -50,7 +50,7 @@ public class Spawn : MonoBehaviour
     public void DecreaseSpawnInterval()
     {
 
-        if (spawnRate > minSpawnRate) //Change spawn rate to 3/4ths what it was
+        if (spawnRate > minSpawnRate) //Change spawn rate to 1/4ths what it was
             spawnRate *= 0.25f;
         else //Make sure spawn rate stays above minimum
             spawnRate = minSpawnRate;
@@ -73,10 +73,13 @@ public class Spawn : MonoBehaviour
 
             //Stop level after all enemies are destroyed
             if(numEnemiesSpawned == numEnemiesDestroyed)
-                LevelManager.levelRunning = false;
+            {
+                LevelTransitionManager.levelRunning = false;
+            }
+                
 
             //Decrease spawn rate after every levels
-            if (lvlNum % 1 == 0)
+            if (lvlNum % 3 == 0)
             {
                 DecreaseSpawnInterval();
             }

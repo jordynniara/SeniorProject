@@ -25,7 +25,7 @@ public class HardEnemy : Enemy{
             shootStyle.speed = bulletSpeed;
         //set target for bullet to destroy
         shootStyle.damage = gameObject.AddComponent(typeof(PlayerDamage)) as PlayerDamage;
-        //Enemy shoot bullet repeatedly
+        //Enemy shoot bullet repeatedly at a random interval
         InvokeRepeating("invokeFire", Random.Range(1, 3), Random.Range(3, 5));
     }
 

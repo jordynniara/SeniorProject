@@ -238,7 +238,7 @@ Prefab:
     - target: {fileID: 114271179683303686, guid: 83ab211ac1f6a485f95f666e27abc0b1,
         type: 2}
       propertyPath: lives
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114271179683303686, guid: 83ab211ac1f6a485f95f666e27abc0b1,
         type: 2}
@@ -891,10 +891,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1634697134}
-  - component: {fileID: 1634697133}
   - component: {fileID: 1634697135}
   - component: {fileID: 1634697137}
   - component: {fileID: 1634697136}
+  - component: {fileID: 1634697133}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -910,11 +910,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1634697132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667f974fac38a4f53b525f29443b22df, type: 3}
+  m_Script: {fileID: 11500000, guid: 91e40cd3ab85045eba3747179e1a5dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lvlStartDelay: 3
-  lvlLabel: {fileID: 1293603593108180, guid: 92d60a2e17d9a4bb8bd3801b14fc2926, type: 2}
+  lvlLabel: {fileID: 1936889872}
 --- !u!4 &1634697134
 Transform:
   m_ObjectHideFlags: 0

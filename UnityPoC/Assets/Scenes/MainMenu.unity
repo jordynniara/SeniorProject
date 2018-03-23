@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 266468197}
   - component: {fileID: 266468196}
   - component: {fileID: 266468195}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 266468194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 494894862}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 419499383}
   - component: {fileID: 419499385}
   - component: {fileID: 419499384}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,8 @@ GameObject:
   m_Component:
   - component: {fileID: 494894862}
   - component: {fileID: 494894863}
-  m_Layer: 5
+  - component: {fileID: 494894864}
+  m_Layer: 0
   m_Name: Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,6 +466,18 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!114 &494894864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494894861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716ec956c18e0e44ca9dd28973a2fcbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 494894863}
 --- !u!1 &499498300
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +488,7 @@ GameObject:
   - component: {fileID: 499498301}
   - component: {fileID: 499498303}
   - component: {fileID: 499498302}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +502,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499498300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419499383}
@@ -1160,9 +1173,9 @@ GameObject:
   - component: {fileID: 1381344213}
   - component: {fileID: 1381344218}
   - component: {fileID: 1381344217}
-  - component: {fileID: 1381344216}
   - component: {fileID: 1381344215}
   - component: {fileID: 1381344214}
+  - component: {fileID: 1381344216}
   m_Layer: 0
   m_Name: New Game
   m_TagString: Untagged
@@ -1194,7 +1207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef58e5f760296cf47ab7eb6c51c3b37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 831729203}
 --- !u!65 &1381344215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1325,10 +1337,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1630844552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c4922715baa44918257d5588485238, type: 3}
+  m_Script: {fileID: 11500000, guid: 56650d47be3424ff993b08c516733b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 831729203}
 --- !u!114 &1630844556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,7 +1726,7 @@ GameObject:
   - component: {fileID: 2075878720}
   - component: {fileID: 2075878722}
   - component: {fileID: 2075878721}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1729,7 +1740,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2075878719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 3.3157177, y: 3.3157187, z: 1.1052395}
   m_Children: []
   m_Father: {fileID: 494894862}

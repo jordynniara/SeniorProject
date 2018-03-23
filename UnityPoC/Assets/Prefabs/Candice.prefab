@@ -117,11 +117,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769503dd11a924617ad6a13560009f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 1000
+  lives: 3
   speed: 5
   bulletSpeed: 10
   shootStyle: {fileID: 0}
-  livesText: {fileID: 0}
+  scoreText: {fileID: 0}
+  gameEnder: {fileID: 0}
 --- !u!212 &212703958200152630
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NewGameInteraction : MonoBehaviour {
 
-    public AudioSource audio;
     void OnMouseUpAsButton()
     {
         SceneManager.LoadScene("GameBoard");
-        audio.Play();
         SetDefaultSettings();
 	}
 
@@ -23,4 +21,5 @@ public class NewGameInteraction : MonoBehaviour {
             PlayerPrefs.SetInt("lives", 3);
         }
     }
+
 }

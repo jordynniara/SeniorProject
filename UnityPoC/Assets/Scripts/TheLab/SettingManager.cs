@@ -7,7 +7,6 @@ using System.IO;
 using UnityEngine.SceneManagement;
 
 public class SettingManager : MonoBehaviour {
-    public AudioSource audio;
 	public Dropdown speedDropdown;
 	public Dropdown shootStyleDropdown;
 	public Dropdown livesDropdown;
@@ -41,7 +40,7 @@ public class SettingManager : MonoBehaviour {
 
 	public void ExitMethod() {
 		SceneManager.LoadScene("MainMenu");
-        audio.Play();
+
 	}
 
 	public void BrowseMethod() {
@@ -84,7 +83,6 @@ public class SettingManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
