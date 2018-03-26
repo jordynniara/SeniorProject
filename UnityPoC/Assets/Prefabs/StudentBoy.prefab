@@ -24,7 +24,8 @@ GameObject:
   - component: {fileID: 61560363918063802}
   - component: {fileID: 114412745010904164}
   - component: {fileID: 114253580634391930}
-  m_Layer: 0
+  - component: {fileID: 114278095210617248}
+  m_Layer: 10
   m_Name: StudentBoy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -109,6 +110,22 @@ MonoBehaviour:
   yMax: 4.3
   spawnLimit: 15
   numSpawned: 0
+--- !u!114 &114278095210617248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062689225480404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5221b694c0548a7a059a46c93e7f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDefs:
+  - offset: {x: 0, y: 0}
+    direction: 270
+    speed: 5
+    bullet: {fileID: 1989445057880118, guid: ce4c419f93fd5413a8fcbd28c138b4a9, type: 2}
 --- !u!114 &114412745010904164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,7 +140,8 @@ MonoBehaviour:
   lives: 1
   speed: 2
   bulletSpeed: 5
-  shootStyle: {fileID: 0}
+  shootStyle: {fileID: 114278095210617248}
+  spawnRate: 0
   scoreValue: 10
 --- !u!212 &212933384957288438
 SpriteRenderer:

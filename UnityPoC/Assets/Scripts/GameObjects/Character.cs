@@ -14,22 +14,32 @@ public abstract class Character : MonoBehaviour
     private float blinkTimer = 0.0f; //amount of time player will blink for during mercy
     private bool mercy = false; //is player is in mercy
     private bool blink = false; // if player is blinking
+    protected CollisionUtil.Mask destroyMask;
+
+    public abstract void OnDamage();
 
     //Removes enemies lives upon bullet collision
-    public void Damage()
+    void OnCollisionEnter2D(Collision2D col)
     {
         if (!mercy)
         {
+
+            if (destroyMask.hasLayer(col.gameObject.layer))
+            {
+                
+                Destroy(col.gameObject);
+            }
             lives--;
             if (lives == 0)
             {
                 Destroy(gameObject);
-				//SceneManager.LoadScene("EndScene");
             }
 
             mercy = true;
             mercyTimer = 2.0f;
             blinkTimer = 0.25f;
+            GetComponent<Collider2D>().enabled =  !mercy;
+            OnDamage();
         }
     }
 
@@ -44,6 +54,7 @@ public abstract class Character : MonoBehaviour
             {
                 mercy = false;
                 blink = false;
+                GetComponent<Collider2D>().enabled = !mercy;
             }
             else if (blinkTimer <= 0.0f)
             {

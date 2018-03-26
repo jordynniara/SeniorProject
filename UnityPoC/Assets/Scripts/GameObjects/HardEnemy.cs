@@ -10,6 +10,7 @@ public class HardEnemy : Enemy{
         base.initEnemy();
 
         //set shooting style and bullet prefab
+        /*
         shootStyle = gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
 
         if(this.name.Contains("Professor"))
@@ -22,10 +23,11 @@ public class HardEnemy : Enemy{
 
         //set bullet speed
         if (bulletSpeed > 0)
-            shootStyle.speed = bulletSpeed;
+            shootStyle.speed = bulletSpeed;*/
         //set target for bullet to destroy
-        shootStyle.damage = gameObject.AddComponent(typeof(PlayerDamage)) as PlayerDamage;
-        //Enemy shoot bullet repeatedly at a random interval
+		
+        //shootStyle.damage = gameObject.AddComponent(typeof(PlayerDamage)) as PlayerDamage;
+        //Enemy shoot bullet repeatedly
         InvokeRepeating("invokeFire", Random.Range(1, 3), Random.Range(3, 5));
     }
 

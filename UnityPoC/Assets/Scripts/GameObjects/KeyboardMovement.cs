@@ -21,7 +21,7 @@ public class KeyboardMovement : MonoBehaviour, Movement{
 		{
 			transform.position += Vector3.right * speed * Time.deltaTime;
 		}
-        print(transform.position);
+        //print(transform.position);
 		//if (Input.GetKey(KeyCode.UpArrow))
 		//{
 		//	transform.position += Vector3.up * speed * Time.deltaTime;

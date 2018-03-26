@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 61292481001204396}
   - component: {fileID: 50945210604330868}
   - component: {fileID: 114048761249821068}
-  m_Layer: 0
+  - component: {fileID: 114652121175389070}
+  m_Layer: 10
   m_Name: Admin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -101,9 +102,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   speed: 2
-  bulletSpeed: 7
-  shootStyle: {fileID: 0}
+  bulletSpeed: 5
+  shootStyle: {fileID: 114652121175389070}
+  spawnRate: 0
   scoreValue: 20
+--- !u!114 &114652121175389070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415081170113154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5221b694c0548a7a059a46c93e7f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDefs:
+  - offset: {x: 0, y: 0.4}
+    direction: 270
+    speed: 10
+    bullet: {fileID: 1741304948956652, guid: 04cc06d0e6a4e4cd6a0e4eaeb2756d7a, type: 2}
+  - offset: {x: 0, y: 0}
+    direction: 240
+    speed: 7
+    bullet: {fileID: 1741304948956652, guid: 04cc06d0e6a4e4cd6a0e4eaeb2756d7a, type: 2}
 --- !u!212 &212717900380490820
 SpriteRenderer:
   m_ObjectHideFlags: 1

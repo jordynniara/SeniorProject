@@ -10,11 +10,11 @@ public abstract class Enemy : Character
     {
         isEnemy = true;
         movement = gameObject.AddComponent(typeof(RandomMovement)) as RandomMovement;
+        destroyMask = new CollisionUtil.Mask().addLayer("PlayerBullet");
     }
 
-    public void Damage()
+    public override void OnDamage()
     {
-        base.Damage();
 		if (lives == 0) {
             Spawn.numEnemiesDestroyed++;
 			Score.score += scoreValue;
