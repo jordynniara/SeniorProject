@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 61613360688785378}
   - component: {fileID: 50506136593126794}
   - component: {fileID: 114171670037608330}
-  m_Layer: 0
+  - component: {fileID: 114087659841255196}
+  m_Layer: 10
   m_Name: Recruiter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -88,6 +89,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114087659841255196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375662639022520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5221b694c0548a7a059a46c93e7f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDefs:
+  - offset: {x: 0, y: 0.2}
+    direction: 270
+    speed: 6
+    bullet: {fileID: 1620387336485180, guid: 63f59587ce2454db8a699ce05b1b653e, type: 2}
+  - offset: {x: 0, y: 0}
+    direction: 240
+    speed: 5
+    bullet: {fileID: 1620387336485180, guid: 63f59587ce2454db8a699ce05b1b653e, type: 2}
+  - offset: {x: 0, y: 0}
+    direction: 300
+    speed: 5
+    bullet: {fileID: 1620387336485180, guid: 63f59587ce2454db8a699ce05b1b653e, type: 2}
 --- !u!114 &114171670037608330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,8 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   speed: 2
-  bulletSpeed: 10
-  shootStyle: {fileID: 0}
+  bulletSpeed: 5
+  shootStyle: {fileID: 114087659841255196}
+  spawnRate: 0
   scoreValue: 30
 --- !u!212 &212484089479657524
 SpriteRenderer:

@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 61446212257366126}
   - component: {fileID: 50317670560978154}
   - component: {fileID: 114522108779729536}
-  m_Layer: 0
+  - component: {fileID: 114056330528220516}
+  m_Layer: 10
   m_Name: Professor
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -88,6 +89,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114056330528220516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1791134088738826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5221b694c0548a7a059a46c93e7f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDefs:
+  - offset: {x: 0.2, y: 0}
+    direction: 270
+    speed: 6
+    bullet: {fileID: 1180493738601282, guid: 088c8386cc53b4a32a19613f4db27975, type: 2}
+  - offset: {x: -0.2, y: 0}
+    direction: 240
+    speed: 6
+    bullet: {fileID: 1180493738601282, guid: 088c8386cc53b4a32a19613f4db27975, type: 2}
 --- !u!114 &114522108779729536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,8 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 2
   speed: 2
-  bulletSpeed: 7
-  shootStyle: {fileID: 0}
+  bulletSpeed: 5
+  shootStyle: {fileID: 114056330528220516}
+  spawnRate: 0
   scoreValue: 20
 --- !u!212 &212083613111001440
 SpriteRenderer:

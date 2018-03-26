@@ -30,10 +30,10 @@ public class MainPlayer : Character
 
         //livesText.text = "x " + lives;
         isEnemy = false;
-
+        destroyMask = new CollisionUtil.Mask().addLayer("EnemyBullet");
         //set movement
         movement = gameObject.AddComponent(typeof(KeyboardMovement)) as KeyboardMovement;
-
+        /*
         //set shooting style and bullet prefab
         shootStyle =  gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
         shootStyle.bullet = (GameObject)Resources.Load("Snake");
@@ -41,9 +41,9 @@ public class MainPlayer : Character
         //set bullet speed
         if (bulletSpeed > 0)
             shootStyle.speed = bulletSpeed;
-
+            */
         //set target for bullet to destroy
-        shootStyle.damage = gameObject.AddComponent(typeof(EnemyDamage)) as EnemyDamage;
+        //shootStyle.damage = gameObject.AddComponent(typeof(EnemyDamage)) as EnemyDamage;
 
         print("lives" + lives);
 	}
@@ -63,13 +63,9 @@ public class MainPlayer : Character
         }
 	}
 
-
-
-
-    public new void Damage()
+    public override void OnDamage()
     {
-		base.Damage();
-        livesText.GetComponent<TextMesh>().text = "x" + lives; 
+        livesText.GetComponent<TextMesh>().text = "x" + lives;
 
         if (lives == 0)
         {

@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 61748839778259026}
   - component: {fileID: 50785082774152548}
   - component: {fileID: 114566223228208746}
-  m_Layer: 0
+  - component: {fileID: 114901934492702218}
+  m_Layer: 10
   m_Name: StudentGirl
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -102,8 +103,25 @@ MonoBehaviour:
   lives: 1
   speed: 2
   bulletSpeed: 5
-  shootStyle: {fileID: 0}
+  shootStyle: {fileID: 114901934492702218}
+  spawnRate: 0
   scoreValue: 10
+--- !u!114 &114901934492702218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964433615155650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5221b694c0548a7a059a46c93e7f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDefs:
+  - offset: {x: 0, y: 0}
+    direction: 270
+    speed: 5
+    bullet: {fileID: 1989445057880118, guid: ce4c419f93fd5413a8fcbd28c138b4a9, type: 2}
 --- !u!212 &212260485747295044
 SpriteRenderer:
   m_ObjectHideFlags: 1
