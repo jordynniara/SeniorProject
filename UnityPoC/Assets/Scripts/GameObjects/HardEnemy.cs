@@ -17,7 +17,7 @@ public class HardEnemy : Enemy{
             shootStyle.bullet = (GameObject)Resources.Load("Assignment");
         }else if(name.Contains(("Admin")))
         {
-            shootStyle.bullet = (GameObject)Resources.Load("Fees");
+            shootStyle.bullet = (GameObject)Resources.Load("Fees s");
         }
 
         //set bullet speed
