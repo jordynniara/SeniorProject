@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114271179683303686}
   - component: {fileID: 61600113518591310}
   - component: {fileID: 111933124252663504}
+  - component: {fileID: 114865769259539950}
   m_Layer: 0
   m_Name: Candice
   m_TagString: Player
@@ -120,9 +121,25 @@ MonoBehaviour:
   lives: 3
   speed: 5
   bulletSpeed: 10
-  shootStyle: {fileID: 0}
+  shootStyle: {fileID: 114865769259539950}
   scoreText: {fileID: 0}
   gameEnder: {fileID: 0}
+--- !u!114 &114865769259539950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322456022368932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5221b694c0548a7a059a46c93e7f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDefs:
+  - offset: {x: 0, y: 0}
+    direction: 90
+    speed: 6
+    bullet: {fileID: 1062064615338292, guid: ec2fb558c4d3a41ffbfee4590ee35fd6, type: 2}
 --- !u!212 &212703958200152630
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -26,12 +26,13 @@ public abstract class Character : MonoBehaviour
 
             if (destroyMask.hasLayer(col.gameObject.layer))
             {
-                
+                //destroys bullet
                 Destroy(col.gameObject);
             }
             lives--;
             if (lives == 0)
             {
+                //destroy character
                 Destroy(gameObject);
             }
 

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61213734660361814}
   - component: {fileID: 114748321816928034}
   - component: {fileID: 82550627489855720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fees
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}

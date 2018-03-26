@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61868116643605108}
   - component: {fileID: 50562480820002880}
   - component: {fileID: 82650942443689384}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BrokenComputer
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114507880615066742}
   - component: {fileID: 61638224507413478}
   - component: {fileID: 82303751834158026}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Beer
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}

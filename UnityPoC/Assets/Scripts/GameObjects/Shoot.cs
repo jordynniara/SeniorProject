@@ -23,10 +23,6 @@ public class Shoot:MonoBehaviour
     public List<BulletDef> bulletDefs;
     //public Damage damage; //to set damage type
 
-    public const int SHOOT_DOWNWARD = -1;
-    public const int SHOOT_UPWARD = 1;
-
-
     public void fire()
     {
         foreach (BulletDef bulletDef in bulletDefs) 
