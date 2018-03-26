@@ -34,7 +34,7 @@ public class HardEnemy : Enemy{
     //used for InvokeRepeating in Start()
     private void invokeFire()
     {
-        shootStyle.fire(Shoot.SHOOT_DOWNWARD);
+        shootStyle.fire();
     }
 	
 	// Update is called once per frame

@@ -59,7 +59,7 @@ public class MainPlayer : Character
         //for shooting bullets
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            shootStyle.fire(Shoot.SHOOT_UPWARD);
+            shootStyle.fire();
         }
 	}
 

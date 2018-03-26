@@ -27,7 +27,7 @@ public class Shoot:MonoBehaviour
     public const int SHOOT_UPWARD = 1;
 
 
-    public void fire(int direction)
+    public void fire()
     {
         foreach (BulletDef bulletDef in bulletDefs) 
         {
@@ -39,7 +39,7 @@ public class Shoot:MonoBehaviour
             // move the bullet
             newBullet.GetComponent<Rigidbody2D>().velocity = bulletDef.directionAsVector() * bulletDef.speed;
 
-            // Destroy the bullet after 2 seconds
+            // Destroy the bullet after 4 seconds
             Destroy(newBullet, 4.0f);
         }
     }
