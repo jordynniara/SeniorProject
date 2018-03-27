@@ -254,6 +254,11 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114865769259539950, guid: 83ab211ac1f6a485f95f666e27abc0b1,
+        type: 2}
+      propertyPath: bulletDefs.Array.data[0].speed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 111933124252663504, guid: 83ab211ac1f6a485f95f666e27abc0b1, type: 2}
     - {fileID: 0}
