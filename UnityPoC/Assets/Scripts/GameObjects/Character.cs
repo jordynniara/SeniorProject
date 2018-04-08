@@ -12,30 +12,24 @@ public abstract class Character : MonoBehaviour
     public Shoot shootStyle; //to define character's shooting style 
     private float mercyTimer = 0.0f; //used for time between player being hit and when it can get hit again
     private float blinkTimer = 0.0f; //amount of time player will blink for during mercy
-    private bool mercy = false; //is player is in mercy
+    protected bool mercy = false; //is player is in mercy
     private bool blink = false; // if player is blinking
     protected CollisionUtil.Mask destroyMask;
 
     public abstract void OnDamage();
 
     //Removes enemies lives upon bullet collision
-    void OnCollisionEnter2D(Collision2D col)
+    protected void OnCollisionEnter2D(Collision2D col)
     {
         if (!mercy)
         {
-
-            if (destroyMask.hasLayer(col.gameObject.layer))
-            {
-                //destroys bullet
-                Destroy(col.gameObject);
-            }
-            lives--;
             if (lives == 0)
             {
-                //destroy character
+                //destroy character when all lives are gone
                 Destroy(gameObject);
             }
 
+            //begin mercy period
             mercy = true;
             mercyTimer = 2.0f;
             blinkTimer = 0.25f;

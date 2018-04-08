@@ -16,8 +16,13 @@ public class GameEnder : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(gameOver)
-            contents.Add(FindObjectOfType(typeof(Character)));
+        if (gameOver)
+        {
+            Spawn.spawnEnabled = false;
+            Score.multiActive = false;
+        }
+            
+            //contents.Add(FindObjectOfType(typeof(Character)));
 		
 	}
 

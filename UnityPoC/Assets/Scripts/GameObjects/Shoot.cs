@@ -13,10 +13,24 @@ public class Shoot:MonoBehaviour
         public float direction;
         public float speed;
         public GameObject bullet;
+
+        public BulletDef(Vector2 offset, float dir, float speed, GameObject bull)
+        {
+            this.offset = offset;
+            direction = dir;
+            this.speed = speed;
+            bullet = bull;
+        }
+
         public Vector2 directionAsVector()
         {
             return new Vector2(Mathf.Cos(direction * Mathf.Deg2Rad), Mathf.Sin(direction * Mathf.Deg2Rad));
         }
+    }
+
+    public Shoot(BulletDef bd)
+    {
+        bulletDefs.Add(bd);
     }
 
 

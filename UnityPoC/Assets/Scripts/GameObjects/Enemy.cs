@@ -13,11 +13,22 @@ public abstract class Enemy : Character
         destroyMask = new CollisionUtil.Mask().addLayer("PlayerBullet");
     }
 
+    protected void OnCollisionEnter2D(Collision2D col)
+    {
+        if (!mercy && destroyMask.hasLayer(col.gameObject.layer))
+        {
+            //destroys bullet
+            Destroy(col.gameObject);
+            lives--;
+            base.OnCollisionEnter2D(col);
+        }
+    }
+
     public override void OnDamage()
     {
 		if (lives == 0) {
             Spawn.numEnemiesDestroyed++;
-			Score.score += scoreValue;
+            Score.UpdateScore(scoreValue);
 		}
     }
 }

@@ -7,45 +7,37 @@ using UnityEngine.UI;
 public class MainPlayer : Character
 {
 
-
+    [SerializeField]
     private GameObject livesText;  //text on screen showing lives left
     [SerializeField]
-	private GameObject scoreText;
+	private GameObject scoreText; // text on screen showing score
     [SerializeField]
     private GameEnder gameEnder;
-
+  
     //initialization
 	void Start () {
+
+        //set mods
         if (PlayerPrefs.GetInt("modding") == 1)
         {
             lives = PlayerPrefs.GetInt("lives");
             speed = PlayerPrefs.GetFloat("speed");
         }
 
-        scoreText = GameObject.Find("Score");
-        livesText = GameObject.Find("Lives");
+        scoreText = GameObject.Find("ScoreText");
+        livesText = GameObject.Find("LivesText");
 
         //set lives text
         livesText.GetComponent<TextMesh>().text = "x" + lives; 
 
-        //livesText.text = "x " + lives;
         isEnemy = false;
         destroyMask = new CollisionUtil.Mask().addLayer("EnemyBullet");
+
         //set movement
         movement = gameObject.AddComponent(typeof(KeyboardMovement)) as KeyboardMovement;
-        /*
-        //set shooting style and bullet prefab
-        shootStyle =  gameObject.AddComponent(typeof(SingleShoot)) as SingleShoot;
-        shootStyle.bullet = (GameObject)Resources.Load("Snake");
 
-        //set bullet speed
-        if (bulletSpeed > 0)
-            shootStyle.speed = bulletSpeed;
-            */
-        //set target for bullet to destroy
-        //shootStyle.damage = gameObject.AddComponent(typeof(EnemyDamage)) as EnemyDamage;
-
-        print("lives" + lives);
+        //pass original shooting style to pickups
+        PickUps.oldStyle = shootStyle;
 	}
 	
 	// Update is called once per frame
@@ -63,7 +55,18 @@ public class MainPlayer : Character
         }
 	}
 
-    public override void OnDamage()
+	protected void OnCollisionEnter2D(Collision2D col)
+	{
+        if (!mercy && destroyMask.hasLayer(col.gameObject.layer))
+        {
+            //destroys bullet
+            Destroy(col.gameObject);
+            lives--;
+            base.OnCollisionEnter2D(col);
+        }
+	}
+
+	public override void OnDamage()
     {
         livesText.GetComponent<TextMesh>().text = "x" + lives;
 
