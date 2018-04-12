@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 89d6ba945007345e685e3df24421d33b
+timeCreated: 1523391181
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dokdo
+  fontNames:
+  - Dokdo
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

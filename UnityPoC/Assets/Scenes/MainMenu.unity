@@ -1619,6 +1619,7 @@ GameObject:
   - component: {fileID: 1987502572}
   - component: {fileID: 1987502571}
   - component: {fileID: 1987502570}
+  - component: {fileID: 1987502574}
   m_Layer: 0
   m_Name: Directions
   m_TagString: Untagged
@@ -1670,7 +1671,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1987502568}
-  m_Text: How to Play
+  m_Text: Survival Guide
   m_OffsetZ: 0
   m_CharacterSize: 1.5
   m_LineSpacing: 1
@@ -1716,6 +1717,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1987502574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987502568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97add013508b472fb6a382811f29f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2075878719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,15 +1753,15 @@ RectTransform:
   m_GameObject: {fileID: 2075878719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 3.3157177, y: 3.3157187, z: 1.1052395}
+  m_LocalScale: {x: 5, y: 4, z: 1.1052395}
   m_Children: []
   m_Father: {fileID: 494894862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49.3, y: -11.1}
-  m_SizeDelta: {x: -153, y: -3}
+  m_AnchoredPosition: {x: -49.4, y: -11.25}
+  m_SizeDelta: {x: -153.2, y: -3.2999992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075878721
 MonoBehaviour:
