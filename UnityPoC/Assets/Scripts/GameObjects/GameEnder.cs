@@ -35,7 +35,7 @@ public class GameEnder : MonoBehaviour {
 
 	private void End() {
 		SceneManager.LoadScene("EndScene");
-        GameObject scoreObject = GameObject.Find("Score");
-        scoreObject.GetComponent<TextMesh>().text = "Score: " + Score.score;
+        //GameObject scoreObject = GameObject.Find("Score");
+        //scoreObject.GetComponent<TextMesh>().text = "Score: " + Score.score;
 	}
 }

@@ -8,13 +8,22 @@ public class Score : MonoBehaviour {
     public static int score = 0;
     public static int multiplier = 1;
     public static bool multiActive = false;
-
-
+    
 
     // Update is called once per frame
     void Update () {
         if (GameEnder.gameOver)
+        {
+            if (multiActive)
+            {
+                GetComponent<TextMesh>().text = "Score x" + Score.multiplier + ": " + score;
+            }
+            else
+            {
+                GetComponent<TextMesh>().text = "Score: " + score;
+            }
             return;
+        }
         
         if(multiActive)
         {
