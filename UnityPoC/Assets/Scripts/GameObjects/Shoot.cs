@@ -28,8 +28,6 @@ public class Shoot:MonoBehaviour
         }
     }
 
-    public Shoot() {}
-
     public Shoot(BulletDef bd)
     {
         bulletDefs.Add(bd);

@@ -9,12 +9,9 @@ public class GameSettings : MonoBehaviour {
 	public int lives;
 	public Sprite sprite;
 
-    public static Shoot playerShootStyle = new Shoot();
 
-    
-
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
 		
 	}
 	
