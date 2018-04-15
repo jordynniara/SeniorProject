@@ -10,9 +10,12 @@ public class SettingManager : MonoBehaviour {
 	public Dropdown speedDropdown;
 	public Dropdown shootStyleDropdown;
 	public Dropdown livesDropdown;
+	public Dropdown musicDropdown;
 	public Button spriteBrowse;
 
 	public GameSettings gameSettings;
+
+	AudioSource myAudio;
 
 	void OnEnable() {
         gameSettings = gameObject.AddComponent(typeof(GameSettings)) as GameSettings;;
@@ -20,8 +23,34 @@ public class SettingManager : MonoBehaviour {
 		speedDropdown.onValueChanged.AddListener (delegate { OnSpeedChange (); });
 		shootStyleDropdown.onValueChanged.AddListener (delegate { OnShootStyleChange (); });
 		livesDropdown.onValueChanged.AddListener (delegate { OnLivesChange (); });
-		//spriteBrowse.onClick.AddListener (delegate { BrowseMethod (); });
+		musicDropdown.onValueChanged.AddListener(delegate { OnMusicChange(); });
 
+	}
+
+	public void OnMusicChange() {
+
+		myAudio = GetComponent<AudioSource> ();
+		AudioClip clip;
+
+		switch (musicDropdown.value) {
+		case 1:
+			clip = Resources.Load<AudioClip>("DeepInTheCavesBelow");
+			GameSettings.music.Add(clip);
+			break;
+		case 2:
+			clip = Resources.Load<AudioClip>("FightForYourLives");
+			GameSettings.music.Add(clip);
+			break;
+		case 3:
+			clip = Resources.Load<AudioClip>("GoingUp");
+			GameSettings.music.Add(clip);
+			break;
+		case 4:
+			clip = Resources.Load<AudioClip>("YetAnotherJourney");
+			GameSettings.music.Add(clip);
+			break;
+
+		}
 	}
 
 	public void OnSpeedChange() {
@@ -43,37 +72,27 @@ public class SettingManager : MonoBehaviour {
 
 	}
 
-	public void BrowseMethod() {
-//		string path = EditorUtility.OpenFilePanel("Overwrite with png", "", "png");
-//		if (path.Length != 0)
-//		{
-//			gameSettings.sprite = path;
-//			//			var fileContent = File.ReadAllBytes(path);
-//			//			texture.LoadImage(fileContent);
-//		}
-	}
-
 	public void saveSettings() {
 		switch (gameSettings.speed) {
-		case 0:
+		case 1:
 			PlayerPrefs.SetFloat ("speed", 3.0f);
 			break;
-		case 1:
+		case 2:
 			PlayerPrefs.SetFloat ("speed", 5.0f);
 			break;
-		case 2:
+		case 3:
 			PlayerPrefs.SetFloat ("speed", 7.0f);
 			break;
 		}
 
 		switch (gameSettings.lives) {
-		case 0:
+		case 1:
 			PlayerPrefs.SetInt ("lives", 1);
 			break;
-		case 1:
+		case 2:
 			PlayerPrefs.SetInt ("lives", 2);
 			break;
-		case 2:
+		case 3:
 			PlayerPrefs.SetInt ("lives", 3);
 			break;
 		}
@@ -90,3 +109,4 @@ public class SettingManager : MonoBehaviour {
 		
 	}
 }
+xs
