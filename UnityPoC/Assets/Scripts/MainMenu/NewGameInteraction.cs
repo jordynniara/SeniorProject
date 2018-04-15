@@ -9,6 +9,8 @@ public class NewGameInteraction : MonoBehaviour {
     {
         SceneManager.LoadScene("GameBoard");
         SetDefaultSettings();
+
+        GameEnder.gameOver = false;
 	}
 
     void SetDefaultSettings(){

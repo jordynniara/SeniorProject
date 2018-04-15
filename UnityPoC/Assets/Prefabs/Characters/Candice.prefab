@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 50249504780404774}
   - component: {fileID: 114271179683303686}
   - component: {fileID: 61600113518591310}
-  - component: {fileID: 111933124252663504}
   - component: {fileID: 114865769259539950}
-  m_Layer: 10
+  - component: {fileID: 111658858752123904}
+  m_Layer: 8
   m_Name: Candice
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1322456022368932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.3, z: -4}
+  m_LocalPosition: {x: 0, y: -3, z: -4}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,7 +90,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.45}
   m_EdgeRadius: 0
---- !u!111 &111933124252663504
+--- !u!111 &111658858752123904
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -98,11 +98,8 @@ Animation:
   m_GameObject: {fileID: 1322456022368932}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 1a49d66011d13460783e9b1cc0c47c93, type: 2}
+  m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -122,8 +119,7 @@ MonoBehaviour:
   speed: 5
   bulletSpeed: 10
   shootStyle: {fileID: 114865769259539950}
-  livesText: {fileID: 0}
-  scoreText: {fileID: 0}
+  livesText: {fileID: 1007477511692070, guid: f3547a26a25fc48c29e742ad09e63f08, type: 2}
   gameEnder: {fileID: 0}
 --- !u!114 &114865769259539950
 MonoBehaviour:
@@ -139,7 +135,7 @@ MonoBehaviour:
   bulletDefs:
   - offset: {x: 0, y: 0}
     direction: 90
-    speed: 6
+    speed: 10
     bullet: {fileID: 1062064615338292, guid: ec2fb558c4d3a41ffbfee4590ee35fd6, type: 2}
 --- !u!212 &212703958200152630
 SpriteRenderer:

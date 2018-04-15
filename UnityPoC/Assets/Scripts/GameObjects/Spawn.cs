@@ -28,12 +28,15 @@ public class Spawn : MonoBehaviour
     private float yMax = Screen.height;
 
 
+
+
     public void SpawnEnemy()
     {
         if (!spawnEnabled)
         {
             //keep the time set
             nextSpawn = Time.time + spawnRate;
+
             return;
         }
 

@@ -13,7 +13,7 @@ public class LoadMainMenu : MonoBehaviour {
 
 	void SetDefaultSettings(){
 
-		Score.score = 0;
+		
 		if (!PlayerPrefs.HasKey("speed"))
 		{
 			PlayerPrefs.SetFloat("speed", 5.0f);

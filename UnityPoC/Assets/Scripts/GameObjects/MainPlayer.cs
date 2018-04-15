@@ -10,8 +10,6 @@ public class MainPlayer : Character
     [SerializeField]
     private GameObject livesText;  //text on screen showing lives left
     [SerializeField]
-	private GameObject scoreText; // text on screen showing score
-    [SerializeField]
     private GameEnder gameEnder;
   
     //initialization
@@ -24,7 +22,6 @@ public class MainPlayer : Character
             speed = PlayerPrefs.GetFloat("speed");
         }
 
-        scoreText = GameObject.Find("ScoreText");
         livesText = GameObject.Find("LivesText");
 
         //set lives text
@@ -74,7 +71,6 @@ public class MainPlayer : Character
         {
             GameEnder.gameOver = true;
 			gameEnder.EndGame ();
-            scoreText.GetComponent<Score>().DisplayScore();
 		}
     }
 

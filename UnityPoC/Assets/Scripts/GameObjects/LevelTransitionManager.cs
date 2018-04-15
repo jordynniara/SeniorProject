@@ -9,6 +9,7 @@ public class LevelTransitionManager : MonoBehaviour {
 
     public GameObject lvlLabel; //text on screen showing level number
 
+
     //flag on whether or not level is running
     //Note: Level can be running while spawning is not
     public static bool levelRunning;
@@ -42,6 +43,7 @@ public class LevelTransitionManager : MonoBehaviour {
     {
         //disable spawning
         Spawn.spawnEnabled = false;
+        Debug.Log("spawn disabled - level trans");
 
         //increase level number
         Spawn.lvlNum++;
