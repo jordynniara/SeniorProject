@@ -904,6 +904,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 1791134088738826, guid: 66960f48542e64e928c4786debe4cbbc, type: 2}
   - {fileID: 1415081170113154, guid: afaef4af04a3448e4aa5f251766a96fc, type: 2}
+  - {fileID: 1791134088738826, guid: 66960f48542e64e928c4786debe4cbbc, type: 2}
   spawnRate: 20
   minSpawnRate: 2
 --- !u!114 &1634697138
@@ -1169,11 +1170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aafa1dd3548e4126b472db1d73c0961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contents:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1634697132}
-  - {fileID: 0}
   endDelay: 3
 --- !u!4 &2034499474
 Transform:

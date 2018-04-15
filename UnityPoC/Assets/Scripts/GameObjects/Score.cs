@@ -14,14 +14,12 @@ public class Score : MonoBehaviour {
     void Update () {
         if (GameEnder.gameOver)
         {
-            if (multiActive)
-            {
-                GetComponent<TextMesh>().text = "Score x" + Score.multiplier + ": " + score;
-            }
-            else
-            {
-                GetComponent<TextMesh>().text = "Score: " + score;
-            }
+            GetComponent<TextMesh>().anchor = TextAnchor.MiddleCenter;
+            transform.position = new Vector3(0f, 1f, 0f);
+            GetComponent<TextMesh>().characterSize = 2;
+            GetComponent<TextMesh>().alignment = TextAlignment.Center;
+
+            GetComponent<TextMesh>().text = "Score: " + score;
             return;
         }
         
@@ -36,14 +34,6 @@ public class Score : MonoBehaviour {
         transform.position = new Vector3(4f, -3.869762f, 0f);
         }
         
-    }
-
-    public void DisplayScore()
-    {
-        GetComponent<TextMesh>().anchor = TextAnchor.MiddleCenter;
-        transform.position = new Vector3(0f, 1f, 0f);
-        GetComponent<TextMesh>().characterSize = 2;
-        GetComponent<TextMesh>().alignment = TextAlignment.Center;
     }
 
     public static void UpdateScore(int val)
