@@ -11,7 +11,11 @@ public class SettingManager : MonoBehaviour {
 	public Dropdown shootStyleDropdown;
 	public Dropdown livesDropdown;
 	public Dropdown musicDropdown;
-	public Button spriteBrowse;
+    public InputField playerBSpeed;
+    public InputField playerBOffX;
+    public InputField playerBOffY;
+    public InputField playerBDir;
+    public Button spriteBrowse;
 
 	public GameSettings gameSettings;
 
@@ -108,5 +112,74 @@ public class SettingManager : MonoBehaviour {
 	void Update () {
 		
 	}
+    
+
+    public void BrowseMethod() {
+        //		string path = EditorUtility.OpenFilePanel("Overwrite with png", "", "png");
+        //		if (path.Length != 0)
+        //		{
+        //			gameSettings.sprite = path;
+        //			//			var fileContent = File.ReadAllBytes(path);
+        //			//			texture.LoadImage(fileContent);
+        //		}
+    }
+
+    public void addPlayerBullet()
+    {
+        Vector2 offset = Vector2.zero;
+        float direction;
+        float speed;
+        if (!float.TryParse(playerBOffX.text, out offset.x))
+        {
+            return;
+        }
+        if (!float.TryParse(playerBOffY.text, out offset.y))
+        {
+            return;
+        }
+        if (!float.TryParse(playerBDir.text, out direction))
+        {
+            return;
+        }
+        if (!float.TryParse(playerBSpeed.text, out speed))
+        {
+            return;
+        }
+        GameSettings.playerShootStyle.bulletDefs.Add(new Shoot.BulletDef(offset, direction, speed, null));
+        updatePlayerBulletList();
+
+    }
+
+    public void applyPlayerBullet()
+    {
+
+        Vector2 offset = Vector2.zero;
+        float direction;
+        float speed;
+        if (!float.TryParse(playerBOffX.text, out offset.x))
+        {
+            return;
+        }
+        if (!float.TryParse(playerBOffY.text, out offset.y))
+        {
+            return;
+        }
+        if (!float.TryParse(playerBDir.text, out direction))
+        {
+            return;
+        }
+        if (!float.TryParse(playerBSpeed.text, out speed))
+        {
+            return;
+        }
+
+        
+    }
+
+    public void updatePlayerBulletList()
+    {
+
+    }
+
+
 }
-xs
