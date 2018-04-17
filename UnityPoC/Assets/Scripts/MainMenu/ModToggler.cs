@@ -9,12 +9,19 @@ public class ModToggler : MonoBehaviour {
 
     private void Start()
     {
-        if (!toggle) toggle = GetComponent<Toggle>();
+		if (!toggle) {
+			toggle = GetComponent<Toggle> ();
+		}
         setMods();
     }
 
     public void setMods()
     {
-        PlayerPrefs.SetInt("modding", toggle.isOn ? 1 : 0);
+		if (toggle.isOn) {
+			PlayerPrefs.SetInt("modding", 1);
+		} 
+		else {
+			PlayerPrefs.SetInt("modding", 0);
+		}
     }
 }
