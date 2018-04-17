@@ -16,25 +16,98 @@ public class SettingManager : MonoBehaviour {
     public InputField playerBOffY;
     public InputField playerBDir;
     public Button spriteBrowse;
+	public Dropdown spriteDropdown;
 
 	public GameSettings gameSettings;
 
 	AudioSource myAudio;
+	Sprite sprite;
 
 	void OnEnable() {
         gameSettings = gameObject.AddComponent(typeof(GameSettings)) as GameSettings;;
-
 		speedDropdown.onValueChanged.AddListener (delegate { OnSpeedChange (); });
 		shootStyleDropdown.onValueChanged.AddListener (delegate { OnShootStyleChange (); });
 		livesDropdown.onValueChanged.AddListener (delegate { OnLivesChange (); });
 		musicDropdown.onValueChanged.AddListener(delegate { OnMusicChange(); });
+		spriteDropdown.onValueChanged.AddListener(delegate { OnSpriteChange(); });
 
+	}
+
+	public void OnSpriteChange() {
+
+		sprite = GetComponent<Sprite> ();
+		Sprite[] sheet = null;
+		Sprite newSprite = null;
+
+		switch (spriteDropdown.value) {
+		case 1:
+			sheet = Resources.LoadAll<Sprite> ("Females/Girl1");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 2:
+			sheet = Resources.LoadAll<Sprite>("Females/Girl2");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 3:
+			sheet = Resources.LoadAll<Sprite>("Females/Girl3");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 4:
+		    sheet = Resources.LoadAll<Sprite>("Females/Girl4");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 5:
+			sheet = Resources.LoadAll<Sprite>("Females/Girl5");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 6:
+			sheet = Resources.LoadAll<Sprite>("Females/Girl6");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 7:
+			sheet = Resources.LoadAll<Sprite>("Males/Boy1");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 8:
+			sheet = Resources.LoadAll<Sprite>("Males/Boy2");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 9:
+			sheet = Resources.LoadAll<Sprite>("Males/Boy3");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 10:
+			sheet = Resources.LoadAll<Sprite>("Males/Boy4");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 11:
+			sheet = Resources.LoadAll<Sprite>("Males/Boy5");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		case 12:
+			sheet = Resources.LoadAll<Sprite>("Males/Boy6");
+			newSprite = sheet[2];
+			GameSettings.player.Add(newSprite);
+			break;
+		}
+		Debug.Log (newSprite);
 	}
 
 	public void OnMusicChange() {
 
 		myAudio = GetComponent<AudioSource> ();
-		AudioClip clip;
+		AudioClip clip = null;
 
 		switch (musicDropdown.value) {
 		case 1:
@@ -55,6 +128,7 @@ public class SettingManager : MonoBehaviour {
 			break;
 
 		}
+		Debug.Log (clip);
 	}
 
 	public void OnSpeedChange() {
@@ -78,6 +152,9 @@ public class SettingManager : MonoBehaviour {
 
 	public void saveSettings() {
 		switch (gameSettings.speed) {
+		case 0:
+			PlayerPrefs.SetFloat ("speed", 5.0f);
+			break;
 		case 1:
 			PlayerPrefs.SetFloat ("speed", 3.0f);
 			break;
@@ -90,6 +167,9 @@ public class SettingManager : MonoBehaviour {
 		}
 
 		switch (gameSettings.lives) {
+		case 0:
+			PlayerPrefs.SetInt ("lives", 3);
+			break;
 		case 1:
 			PlayerPrefs.SetInt ("lives", 1);
 			break;
@@ -180,6 +260,5 @@ public class SettingManager : MonoBehaviour {
     {
 
     }
-
-
+    
 }
