@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 
+    - m_Text: Default
       m_Image: {fileID: 0}
     - m_Text: 'Deep In The Canvas Below '
       m_Image: {fileID: 0}
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 
+    - m_Text: Default
       m_Image: {fileID: 0}
     - m_Text: 'Single '
       m_Image: {fileID: 0}
@@ -3733,7 +3733,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 
+    - m_Text: Default
       m_Image: {fileID: 0}
     - m_Text: Slow
       m_Image: {fileID: 0}
@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 
+    - m_Text: 'Default '
       m_Image: {fileID: 0}
     - m_Text: Girl 1
       m_Image: {fileID: 21300000, guid: 889790915834b40a3987909a60102568, type: 3}
@@ -4332,7 +4332,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 
+    - m_Text: Default
       m_Image: {fileID: 0}
     - m_Text: 1
       m_Image: {fileID: 0}
@@ -4992,7 +4992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Default '
 --- !u!222 &1426794496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5928,7 +5928,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Default
 --- !u!222 &1678105831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6002,7 +6002,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Default
 --- !u!222 &1679487589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6856,7 +6856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Default
 --- !u!222 &2006511029
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7287,7 +7287,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Default
 --- !u!222 &2130191500
 CanvasRenderer:
   m_ObjectHideFlags: 0
