@@ -51,9 +51,9 @@ public class MainPlayer : Character
         movement.move(speed);
 
         //Blink if hit a\
-		//if (SettingManager.changeNumLives) {
+		if (SettingManager.changeNumLives) {
 			SpareMe ();
-		//}
+		}
 
         //for shooting bullets
         if (Input.GetKeyDown(KeyCode.Space))
