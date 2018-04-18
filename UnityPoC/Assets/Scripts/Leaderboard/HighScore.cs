@@ -85,12 +85,14 @@ public class HighScore : MonoBehaviour
         ScoreSet set = new ScoreSet(inputInitial, newScore);
         scoreList.Add(set); //add new score to the list
 
-        scoreList.Sort(new ScoreSet()); // sort list
+
 
         if (scoreList.Count > MAX_NUM_SCORES) //if the list is above max
         {
             scoreList.RemoveRange(MAX_NUM_SCORES - 1, scoreList.Count - MAX_NUM_SCORES); //remove everything after max number of scores
         }
+
+        scoreList.Sort(new ScoreSet()); // sort list
 
         UpdateLeaderboard();
     }
@@ -99,26 +101,29 @@ public class HighScore : MonoBehaviour
     {
         if (scoreList.Count > 0)
             return;
-        using (StreamReader reader = new StreamReader(path, true))
-        {
-            string line;
-            try
+        //using (File.Open(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        //{
+            using (StreamReader reader = new StreamReader(path, true))
             {
-                while ((line = reader.ReadLine()) != null)
+                string line;
+                try
                 {
-                    string[] words = line.Split(' ');//initials and score separated by space
-                    string initials = words[0];
-                    int score;
-                    int.TryParse(words[1], out score);
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] words = line.Split(' ');//initials and score separated by space
+                        string initials = words[0];
+                        int score;
+                        int.TryParse(words[1], out score);
 
-                    //create new object and add to list
-                    scoreList.Add(new ScoreSet(initials, score));
+                        //create new object and add to list
+                        scoreList.Add(new ScoreSet(initials, score));
+                    }
                 }
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e.Message);
-            }
+                catch (Exception e)
+                {
+                    Debug.Log(e.Message);
+                }
+           // }
         }
     }
 
@@ -149,24 +154,24 @@ public class HighScore : MonoBehaviour
     //called when game is closed in order to update
     public static void WriteToFile()
     {
-        using (StreamWriter writer = new StreamWriter(path, true))
-        {
-            try
+        scoreList.Sort(new ScoreSet());
+        //using (File.Open(path, FileMode.Open, FileAccess.Write))
+        //{
+            using (StreamWriter writer = new StreamWriter(path, false))
             {
-                //clear contents of text file
-                File.WriteAllText(path, "");
-
-                //write list to text file- format: initials [space] score\n
-                foreach (ScoreSet obj in scoreList)
+                try
                 {
-                    writer.WriteLine(obj.initials + " " + obj.score.ToString());
+                    //write list to text file- format: initials [space] score\n
+                    foreach (ScoreSet obj in scoreList)
+                    {
+                        writer.WriteLine(obj.initials + " " + obj.score.ToString());
+                    }
                 }
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e.Message);
-            }
-
+                catch (Exception e)
+                {
+                    Debug.Log(e.Message);
+                }
+            //}
         }
     }
 }
