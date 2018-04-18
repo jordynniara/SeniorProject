@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +9,8 @@ public class MainPlayer : Character
 
     [SerializeField]
     private GameObject livesText;  //text on screen showing lives left
+	[SerializeField]
+	private GameObject infinityText;
     [SerializeField]
     private GameEnder gameEnder;
 
@@ -39,7 +41,13 @@ public class MainPlayer : Character
         livesText = GameObject.Find("LivesText");
 
         //set lives text
-        livesText.GetComponent<TextMesh>().text = "x" + lives; 
+		if (SettingManager.changeNumLives) {
+			livesText.GetComponent<TextMesh> ().text = "x" + lives; 
+			infinityText.gameObject.SetActive (false);
+		} 
+		else {
+			livesText.GetComponent<TextMesh> ().text = "x";
+		}
 
         isEnemy = false;
         destroyMask = new CollisionUtil.Mask().addLayer("EnemyBullet");
@@ -56,8 +64,10 @@ public class MainPlayer : Character
         //move the character
         movement.move(speed);
 
-        //Blink if hit a
-        SpareMe();
+        //Blink if hit a\
+		if (SettingManager.changeNumLives) {
+			SpareMe ();
+		}
 
         //for shooting bullets
         if (Input.GetKeyDown(KeyCode.Space))
@@ -72,14 +82,23 @@ public class MainPlayer : Character
         {
             //destroys bullet
             Destroy(col.gameObject);
-            lives--;
+
+			if (SettingManager.changeNumLives) {
+				lives--;
+			}
+
             base.OnCollisionEnter2D(col);
         }
 	}
 
 	public override void OnDamage()
     {
-        livesText.GetComponent<TextMesh>().text = "x" + lives;
+		if (SettingManager.changeNumLives) {
+			livesText.GetComponent<TextMesh> ().text = "x" + lives;
+		}
+		else {
+			livesText.GetComponent<TextMesh> ().text = "x";
+		}
 
         if (lives == 0)
         {

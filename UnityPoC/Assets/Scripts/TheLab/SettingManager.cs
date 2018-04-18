@@ -7,6 +7,9 @@ using System.IO;
 using UnityEngine.SceneManagement;
 
 public class SettingManager : MonoBehaviour {
+
+	public static bool changeNumLives = true;
+
 	public Dropdown speedDropdown;
 	public Dropdown shootStyleDropdown;
 	public Dropdown livesDropdown;
@@ -43,63 +46,87 @@ public class SettingManager : MonoBehaviour {
 		switch (spriteDropdown.value) {
 		case 1:
 			sheet = Resources.LoadAll<Sprite> ("Females/Girl1");
-			newSprite = sheet[2];
-			GameSettings.player.Add(newSprite);
+			newSprite = sheet [2];
+			GameSettings.player.Add (newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 2:
 			sheet = Resources.LoadAll<Sprite>("Females/Girl2");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 3:
 			sheet = Resources.LoadAll<Sprite>("Females/Girl3");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 4:
 		    sheet = Resources.LoadAll<Sprite>("Females/Girl4");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 5:
 			sheet = Resources.LoadAll<Sprite>("Females/Girl5");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 6:
 			sheet = Resources.LoadAll<Sprite>("Females/Girl6");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 7:
 			sheet = Resources.LoadAll<Sprite>("Males/Boy1");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 8:
 			sheet = Resources.LoadAll<Sprite>("Males/Boy2");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 9:
 			sheet = Resources.LoadAll<Sprite>("Males/Boy3");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 10:
 			sheet = Resources.LoadAll<Sprite>("Males/Boy4");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 11:
 			sheet = Resources.LoadAll<Sprite>("Males/Boy5");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		case 12:
 			sheet = Resources.LoadAll<Sprite>("Males/Boy6");
 			newSprite = sheet[2];
 			GameSettings.player.Add(newSprite);
+			newSprite = sheet [0];
+			GameSettings.bodyIcon.Add (newSprite);
 			break;
 		}
 		Debug.Log (newSprite);
@@ -239,6 +266,9 @@ public class SettingManager : MonoBehaviour {
 			break;
 		case 3:
 			PlayerPrefs.SetInt ("lives", 3);
+			break;
+		case 4:
+			changeNumLives = false;
 			break;
 		}
         List<Shoot.BulletDef> bullets = new List<Shoot.BulletDef>();
