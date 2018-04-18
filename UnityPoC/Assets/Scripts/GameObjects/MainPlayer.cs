@@ -11,15 +11,29 @@ public class MainPlayer : Character
     private GameObject livesText;  //text on screen showing lives left
     [SerializeField]
     private GameEnder gameEnder;
+
+    public GameObject bulletType;
   
     //initialization
 	void Start () {
+        
 
         //set mods
         if (PlayerPrefs.GetInt("modding") == 1)
         {
             lives = PlayerPrefs.GetInt("lives");
             speed = PlayerPrefs.GetFloat("speed");
+            if (GameSettings.playerBullets != null && GameSettings.playerBullets.Count > 0)
+            {
+                
+                shootStyle = this.gameObject.AddComponent<Shoot>();
+                
+                foreach (var bulletDef in GameSettings.playerBullets)
+                {
+                    Shoot.BulletDef bd = new Shoot.BulletDef(bulletDef.offset, bulletDef.direction, bulletDef.speed, bulletType);
+                    shootStyle.bulletDefs.Add(bd);
+                }
+            }
         }
 
         livesText = GameObject.Find("LivesText");

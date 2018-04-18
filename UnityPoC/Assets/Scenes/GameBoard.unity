@@ -248,7 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023f10520581540c586cf104d3840b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeSprite: {fileID: 21300004, guid: 889790915834b40a3987909a60102568, type: 3}
 --- !u!1 &460187245
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -2.5
+  background: {fileID: 460187247}
 --- !u!4 &930048305
 Transform:
   m_ObjectHideFlags: 0

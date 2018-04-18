@@ -19,6 +19,7 @@ public class SettingManager : MonoBehaviour {
 	public Dropdown spriteDropdown;
 
 	public GameSettings gameSettings;
+    public ListControl listControl;
 
 	AudioSource myAudio;
 	Sprite sprite;
@@ -137,8 +138,68 @@ public class SettingManager : MonoBehaviour {
 
 	}
 
-	public void OnShootStyleChange() {
-		gameSettings.shootStyle = shootStyleDropdown.value;
+	public void OnShootStyleChange()
+    {
+        List<BulletEntry> bullets = new List<BulletEntry>();
+        List<string> options = new List<string>();
+        switch (shootStyleDropdown.value)
+        {
+            case 1:
+                {
+                    BulletEntry be = new BulletEntry();
+                    be.name = "Bullet 0";
+                    be.bullet = new Shoot.BulletDef(new Vector2(), 90, 6, null);
+                    options.Add("Bullet 0");
+                    bullets.Add(be);
+                }
+                break;
+            case 2:
+                {
+
+                    BulletEntry be = new BulletEntry();
+                    be.name = "Bullet 0";
+                    be.bullet = new Shoot.BulletDef(new Vector2(1, 0), 90, 6, null);
+                    options.Add("Bullet 0");
+                    bullets.Add(be);
+
+                    be = new BulletEntry();
+                    be.name = "Bullet 1";
+                    be.bullet = new Shoot.BulletDef(new Vector2(-1, 0), 90, 6, null);
+                    options.Add("Bullet 1");
+                    bullets.Add(be);
+
+                }
+                break;
+            case 3:
+                {
+                    BulletEntry be = new BulletEntry();
+                    be.name = "Bullet 0";
+                    be.bullet = new Shoot.BulletDef(new Vector2(), 60, 6, null);
+                    options.Add("Bullet 0");
+                    bullets.Add(be);
+                    be = new BulletEntry();
+                    be.name = "Bullet 1";
+                    be.bullet = new Shoot.BulletDef(new Vector2(), 90, 6.5f, null);
+                    options.Add("Bullet 1");
+                    bullets.Add(be);
+                    be = new BulletEntry();
+                    be.name = "Bullet 2";
+                    be.bullet = new Shoot.BulletDef(new Vector2(), 120, 6, null);
+                    options.Add("Bullet 2");
+                    bullets.Add(be);
+
+                }
+                break;
+        }
+        Debug.Log(bullets.Count);
+        for (int i = 0; i < bullets.Count; i++)
+        {
+            listControl.bulletEntries = bullets;
+
+            listControl.dropdownEntries.ClearOptions();
+            listControl.dropdownEntries.AddOptions(options);
+            listControl.dropdownEntries.RefreshShownValue();
+        }
 	}
 
 	public void OnLivesChange() {
@@ -180,6 +241,12 @@ public class SettingManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("lives", 3);
 			break;
 		}
+        List<Shoot.BulletDef> bullets = new List<Shoot.BulletDef>();
+        foreach (var entry in listControl.bulletEntries)
+        {
+            bullets.Add(entry.bullet);
+        }
+        GameSettings.playerBullets = bullets;
 
 		PlayerPrefs.Save ();
 	}
@@ -232,26 +299,7 @@ public class SettingManager : MonoBehaviour {
 
     public void applyPlayerBullet()
     {
-
-        Vector2 offset = Vector2.zero;
-        float direction;
-        float speed;
-        if (!float.TryParse(playerBOffX.text, out offset.x))
-        {
-            return;
-        }
-        if (!float.TryParse(playerBOffY.text, out offset.y))
-        {
-            return;
-        }
-        if (!float.TryParse(playerBDir.text, out direction))
-        {
-            return;
-        }
-        if (!float.TryParse(playerBSpeed.text, out speed))
-        {
-            return;
-        }
+        
 
         
     }

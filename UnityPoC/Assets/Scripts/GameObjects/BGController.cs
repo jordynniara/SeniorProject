@@ -5,10 +5,11 @@ using UnityEngine;
 public class BGController : MonoBehaviour {
 
     public float speed;
+    public SpriteRenderer background;
 
 	// Use this for initialization
 	void Start () {
-	
+	 
 	}
 
     private void FixedUpdate()
@@ -19,7 +20,10 @@ public class BGController : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        while (transform.position.y < -10.0f) transform.position += new Vector3(0, 10.0f);
-        while (transform.position.y > 10.0f) transform.position -= new Vector3(0, 10.0f);
+        float height = background.bounds.size.y;
+        
+
+        while (transform.position.y < -height) transform.position += new Vector3(0, height);
+        while (transform.position.y > height) transform.position -= new Vector3(0, height);
     }
 }

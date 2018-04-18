@@ -28,8 +28,15 @@ public class Shoot:MonoBehaviour
         }
     }
 
+    public Shoot()
+    {
+        bulletDefs = new List<BulletDef>();
+    }
+
     public Shoot(BulletDef bd)
     {
+
+        bulletDefs = new List<BulletDef>();
         bulletDefs.Add(bd);
     }
 
@@ -39,7 +46,7 @@ public class Shoot:MonoBehaviour
 
     public void fire()
     {
-        foreach (BulletDef bulletDef in bulletDefs) 
+        foreach (BulletDef bulletDef in bulletDefs)
         {
             // Create the Bullet from the Bullet Prefab
             GameObject newBullet = (GameObject)Instantiate(bulletDef.bullet,
