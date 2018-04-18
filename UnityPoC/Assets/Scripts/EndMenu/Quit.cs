@@ -8,8 +8,11 @@ public class Quit : MonoBehaviour
     public AudioSource audio;
     void OnMouseUpAsButton()
     {
-        Application.Quit();
+        //save list of highscores
+        HighScore.WriteToFile();
+
         Debug.Log("Game is exiting");
         audio.Play();
+        Application.Quit();
     }
 }

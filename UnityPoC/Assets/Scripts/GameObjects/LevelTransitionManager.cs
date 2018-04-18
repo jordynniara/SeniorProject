@@ -43,7 +43,6 @@ public class LevelTransitionManager : MonoBehaviour {
     {
         //disable spawning
         Spawn.spawnEnabled = false;
-        Debug.Log("spawn disabled - level trans");
 
         //increase level number
         Spawn.lvlNum++;

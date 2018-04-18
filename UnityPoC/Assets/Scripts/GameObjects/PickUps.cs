@@ -128,6 +128,8 @@ public class PickUps : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+        if (countdown == null)
+            return;
 		bool destroyReady;
 		//only countdown if the timer is currently active
 		if (countdown.destroyTimerActive) {

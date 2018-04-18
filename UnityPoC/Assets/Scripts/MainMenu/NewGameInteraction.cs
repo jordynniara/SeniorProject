@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class NewGameInteraction : MonoBehaviour {
 
+
+
     void OnMouseUpAsButton()
     {
         SceneManager.LoadScene("GameBoard");
         SetDefaultSettings();
 
         GameEnder.gameOver = false;
+        GameEnder.toLeaderboard = false;
 	}
 
     void SetDefaultSettings(){
