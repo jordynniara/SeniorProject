@@ -14,18 +14,17 @@ public class SettingManager : MonoBehaviour {
 	public Dropdown shootStyleDropdown;
 	public Dropdown livesDropdown;
 	public Dropdown musicDropdown;
+	public Dropdown spriteDropdown;
+	public Dropdown backgroundDropdown;
     public InputField playerBSpeed;
     public InputField playerBOffX;
     public InputField playerBOffY;
     public InputField playerBDir;
     public Button spriteBrowse;
-	public Dropdown spriteDropdown;
+
 
 	public GameSettings gameSettings;
     public ListControl listControl;
-
-	AudioSource myAudio;
-	Sprite sprite;
 
 	void OnEnable() {
         gameSettings = gameObject.AddComponent(typeof(GameSettings)) as GameSettings;;
@@ -34,12 +33,36 @@ public class SettingManager : MonoBehaviour {
 		livesDropdown.onValueChanged.AddListener (delegate { OnLivesChange (); });
 		musicDropdown.onValueChanged.AddListener(delegate { OnMusicChange(); });
 		spriteDropdown.onValueChanged.AddListener(delegate { OnSpriteChange(); });
+		backgroundDropdown.onValueChanged.AddListener (delegate { OnBackgroundChange (); });
 
+	}
+
+	public void OnBackgroundChange() {
+
+		Sprite newBackground;
+
+		switch (backgroundDropdown.value) {
+		case 1:
+			newBackground = Resources.Load<Sprite> ("chalkboard");
+			GameSettings.background.Add (newBackground);
+			break;
+		case 2:
+			newBackground = Resources.Load<Sprite> ("blackboard");
+			GameSettings.background.Add (newBackground);
+			break;
+		case 3:
+			newBackground = Resources.Load<Sprite> ("clouds");
+			GameSettings.background.Add (newBackground);
+			break;
+		case 4:
+			newBackground = Resources.Load<Sprite> ("stars");
+			GameSettings.background.Add (newBackground);
+			break;
+		}
 	}
 
 	public void OnSpriteChange() {
 
-		sprite = GetComponent<Sprite> ();
 		Sprite[] sheet = null;
 		Sprite newSprite = null;
 
@@ -134,7 +157,6 @@ public class SettingManager : MonoBehaviour {
 
 	public void OnMusicChange() {
 
-		myAudio = GetComponent<AudioSource> ();
 		AudioClip clip = null;
 
 		switch (musicDropdown.value) {
