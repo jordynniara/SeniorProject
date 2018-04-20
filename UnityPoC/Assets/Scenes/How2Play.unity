@@ -501,8 +501,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0.5
-  m_Text: 'Candice is a typical computer science student at North Carolina A&T State
-    Univeristy who excels at the Python coding language.
+  m_Text: 'Jay is a typical computer science student at North Carolina A&T State Univeristy
+    who excels at the Python coding language.
 
 '
 --- !u!222 &334336529
@@ -3824,7 +3824,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 394871452}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.3067112
+  m_Size: 0.30671108
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4351,7 +4351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0.5
-  m_Text: Use your keyboard to move Candace and dodge the all of the nonsense.
+  m_Text: Use your keyboard to move Jay and dodge the all of the nonsense.
 --- !u!222 &1831558890
 CanvasRenderer:
   m_ObjectHideFlags: 0

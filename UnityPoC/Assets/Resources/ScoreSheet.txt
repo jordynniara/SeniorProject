@@ -1,10 +1,4 @@
-abc 1234567890
-def 123456789
-ghi 12345678
-jkl 1234567
-lmn 123456
-opq 12345
-rst 1234
-uvw 123
-xyz 12
-abb 1
+IAN 500
+Pat 150
+abc 150
+jns 40

@@ -8,7 +8,6 @@ using System.Text.RegularExpressions;
 public class SubmitInput : MonoBehaviour {
 
     private string inputText;
-    private bool invalid;
     private int length;
     public InputField field;
     public TextMesh advisoryText;
@@ -23,7 +22,6 @@ public class SubmitInput : MonoBehaviour {
         if(done == null)
             done = GameObject.Find("Done");
 
-        invalid = true;
         inputText = field.textComponent.text;
         field.onValidateInput += Field_OnValidateInput;
         SceneManage.setLastLevel(SceneManager.GetActiveScene().name);
@@ -40,11 +38,8 @@ public class SubmitInput : MonoBehaviour {
            (!Regex.IsMatch(addedChar.ToString(), "[A-Z]")&&
             !Regex.IsMatch(addedChar.ToString(), "[a-z]")))
         {
-            invalid = true;
             return '\0';
         }
-
-        invalid = false;
         return addedChar;
     }
 
@@ -66,9 +61,9 @@ public class SubmitInput : MonoBehaviour {
     {
         length = field.textComponent.text.Length;
 
-        if (length == 0 || invalid)
+        if (length == 0 )
             AdvisoryOn();
-        else if (!invalid)
+        else
             AdvisoryOff();
 	}
 

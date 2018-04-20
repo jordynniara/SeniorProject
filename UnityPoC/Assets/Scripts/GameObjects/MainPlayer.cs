@@ -46,6 +46,7 @@ public class MainPlayer : Character
 			infinityText.gameObject.SetActive (false);
 		} 
 		else {
+            // for infinite lives
 			livesText.GetComponent<TextMesh> ().text = "x";
 		}
 
@@ -64,10 +65,8 @@ public class MainPlayer : Character
         //move the character
         movement.move(speed);
 
-        //Blink if hit a\
-		if (SettingManager.changeNumLives) {
-			SpareMe ();
-		}
+        //Blink if hit
+		SpareMe ();
 
         //for shooting bullets
         if (Input.GetKeyDown(KeyCode.Space))
