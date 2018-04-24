@@ -200,6 +200,7 @@ public class SettingManager : MonoBehaviour {
                     be.bullet = new Shoot.BulletDef(new Vector2(), 90, 6, null);
                     options.Add("Bullet 0");
                     bullets.Add(be);
+                    
                 }
                 break;
             case 2:
@@ -248,6 +249,7 @@ public class SettingManager : MonoBehaviour {
             listControl.dropdownEntries.ClearOptions();
             listControl.dropdownEntries.AddOptions(options);
             listControl.dropdownEntries.RefreshShownValue();
+            listControl.dropdownEntries.interactable = true;
         }
 	}
 

@@ -28,7 +28,8 @@ public class ListControl : MonoBehaviour
         dropdownEntries.AddOptions(names);
         dropdownEntries.value = dropdownEntries.options.Count - 1;
         dropdownEntries.RefreshShownValue();
-        dropdownEntries.enabled = true;
+        dropdownEntries.interactable = true;
+        dropdownEntries.Hide();
 
     }
 
@@ -38,6 +39,7 @@ public class ListControl : MonoBehaviour
         if (bulletEditor.gameObject.activeInHierarchy) return;
         if (dropdownEntries.options.Count > 0 && dropdownEntries.value != -1)
         {
+            dropdownEntries.Hide();
             Debug.Log(dropdownEntries.options.Count);
             Debug.Log(dropdownEntries.value);
             bulletEntries.RemoveAt(dropdownEntries.value);
@@ -51,7 +53,7 @@ public class ListControl : MonoBehaviour
         }
         if (dropdownEntries.options.Count == 0)
         {
-            dropdownEntries.enabled = false;
+            dropdownEntries.interactable = false;
         }
 
     }
@@ -59,11 +61,12 @@ public class ListControl : MonoBehaviour
     public void editBullet()
     {
 
-        if (bulletEditor.gameObject.activeInHierarchy || !dropdownEntries.enabled) return;
+        if (bulletEditor.gameObject.activeInHierarchy || !dropdownEntries.interactable) return;
         if (dropdownEntries.options.Count > 0 && dropdownEntries.value != -1)
         {
+            dropdownEntries.Hide();
             bulletEditor.gameObject.SetActive(true);
-            dropdownEntries.enabled = !bulletEditor.gameObject.activeInHierarchy;
+            dropdownEntries.interactable = !bulletEditor.gameObject.activeInHierarchy;
             nameField.text = bulletEntries[dropdownEntries.value].name;
             offsetXField.text = bulletEntries[dropdownEntries.value].bullet.offset.x.ToString();
             offsetYField.text = bulletEntries[dropdownEntries.value].bullet.offset.y.ToString();
@@ -99,7 +102,7 @@ public class ListControl : MonoBehaviour
         if (!isValid()) return;
         applyChanges();
         bulletEditor.gameObject.SetActive(false);
-        dropdownEntries.enabled = !bulletEditor.gameObject.activeInHierarchy;
+        dropdownEntries.interactable = !bulletEditor.gameObject.activeInHierarchy && bulletEntries.Count > 0;
     }
 
     public void validateName(InputField src)
