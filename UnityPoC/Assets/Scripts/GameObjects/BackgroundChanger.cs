@@ -9,7 +9,8 @@ public class BackgroundChanger : MonoBehaviour {
 	void Start () {
 		if (PlayerPrefs.GetInt ("modding") == 1) {
 			try {
-				this.gameObject.GetComponent<SpriteRenderer> ().sprite = GameSettings.background[GameSettings.background.Count-1];
+                if (GameSettings.background.Count > 0)
+				    this.gameObject.GetComponent<SpriteRenderer> ().sprite = GameSettings.background[GameSettings.background.Count-1];
 			}
 			catch (Exception e) {
 				Debug.Log(e.Message);

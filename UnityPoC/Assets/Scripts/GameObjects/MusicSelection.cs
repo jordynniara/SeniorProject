@@ -11,8 +11,11 @@ public class MusicSelection : MonoBehaviour {
 	void Start () {
 		if (PlayerPrefs.GetInt ("modding") == 1) {
 			try {
-				backgroundMusic.clip = GameSettings.music [GameSettings.music.Count-1];
-				backgroundMusic.Play ();
+                if (GameSettings.music.Count > 0)
+                {
+                    backgroundMusic.clip = GameSettings.music[GameSettings.music.Count - 1];
+                    backgroundMusic.Play();
+                }
 			}
 			catch (Exception e) {
 				Debug.Log (e.Message);

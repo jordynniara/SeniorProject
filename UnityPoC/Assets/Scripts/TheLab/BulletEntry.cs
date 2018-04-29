@@ -9,7 +9,7 @@ public class BulletEntry {
 
     public BulletEntry()
     {
-        bullet = new Shoot.BulletDef();
+        bullet = new Shoot.BulletDef(Vector2.zero, 90.0f, 6.0f, null);
         name = "New";
     }
 

@@ -23,14 +23,14 @@ public class MainPlayer : Character
         //set mods
         if (PlayerPrefs.GetInt("modding") == 1)
         {
-            lives = PlayerPrefs.GetInt("lives");
-            speed = PlayerPrefs.GetFloat("speed");
-            if (GameSettings.playerBullets != null && GameSettings.playerBullets.Count > 0)
+            lives = GameSettings.lives[0];
+            speed = GameSettings.speedValues[0];
+            if (GameSettings.shotTypes[0] != null)
             {
                 
                 shootStyle = this.gameObject.AddComponent<Shoot>();
-                
-                foreach (var bulletDef in GameSettings.playerBullets)
+
+                foreach (var bulletDef in GameSettings.shotTypes[0])
                 {
                     Shoot.BulletDef bd = new Shoot.BulletDef(bulletDef.offset, bulletDef.direction, bulletDef.speed, bulletType);
                     shootStyle.bulletDefs.Add(bd);

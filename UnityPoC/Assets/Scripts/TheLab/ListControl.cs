@@ -9,13 +9,12 @@ public class ListControl : MonoBehaviour
     public Dropdown dropdownEntries;
     public Canvas bulletEditor;
     public InputField nameField, offsetXField, offsetYField, directionField, speedField;
-    public List<BulletEntry> bulletEntries;
+    public List<BulletEntry> bulletEntries = new List<BulletEntry>();
     private bool[] validations = new bool[5];
 
     // Use this for initialization
     void Start()
     {
-        bulletEntries = new List<BulletEntry>();
     }
 
     public void addBullet()
@@ -58,9 +57,8 @@ public class ListControl : MonoBehaviour
 
     }
 
-    public void editBullet()
+    public void editBullet(Dropdown reactiv)
     {
-
         if (bulletEditor.gameObject.activeInHierarchy || !dropdownEntries.interactable) return;
         if (dropdownEntries.options.Count > 0 && dropdownEntries.value != -1)
         {
@@ -72,6 +70,7 @@ public class ListControl : MonoBehaviour
             offsetYField.text = bulletEntries[dropdownEntries.value].bullet.offset.y.ToString();
             directionField.text = bulletEntries[dropdownEntries.value].bullet.direction.ToString();
             speedField.text = bulletEntries[dropdownEntries.value].bullet.speed.ToString();
+            reactiv.interactable = false;
         }
     }
 
@@ -96,13 +95,14 @@ public class ListControl : MonoBehaviour
         dropdownEntries.RefreshShownValue();
     }
 
-    public void okChanges()
+    public void okChanges(Dropdown reactiv)
     {
 
         if (!isValid()) return;
         applyChanges();
         bulletEditor.gameObject.SetActive(false);
         dropdownEntries.interactable = !bulletEditor.gameObject.activeInHierarchy && bulletEntries.Count > 0;
+        reactiv.interactable = true;
     }
 
     public void validateName(InputField src)
