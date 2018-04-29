@@ -129,6 +129,8 @@ MonoBehaviour:
   bulletSpeed: 5
   shootStyle: {fileID: 114087659841255196}
   scoreValue: 30
+  modValue: 5
+  bulletType: {fileID: 1620387336485180, guid: 63f59587ce2454db8a699ce05b1b653e, type: 2}
 --- !u!212 &212484089479657524
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -138,6 +140,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -153,6 +156,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
