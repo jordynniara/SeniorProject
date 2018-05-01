@@ -47,11 +47,14 @@ public class RandomMovement : MonoBehaviour, Movement {
         timeToMove -= Time.deltaTime;
         if (timeToMove <= 0)
         {
-            movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            timeToMove += speed;
+            var direction = Random.Range(0.0f, 359.999f);
+            var vec = new Vector2(Mathf.Cos(direction * Mathf.Deg2Rad), Mathf.Sin(direction * Mathf.Deg2Rad));
+            movement = vec * speed;
+            timeToMove += Random.Range(2.0f, 5.0f);
         }
 
         rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+        keepInBounds();
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
@@ -60,6 +63,7 @@ public class RandomMovement : MonoBehaviour, Movement {
             movement.x *= -1;
             movement.y *= -1;
             rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+            keepInBounds();
         }
             
     }

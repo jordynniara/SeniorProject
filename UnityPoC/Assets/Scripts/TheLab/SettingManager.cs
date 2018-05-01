@@ -288,7 +288,7 @@ public class SettingManager : MonoBehaviour
             switch (livesDropdown[j].value)
             {
                 case 0:
-                    GameSettings.lives[j] = j == 0 ? 3 : 2;
+                    GameSettings.lives[j] = j == 0 ? 3 : -1;
                     break;
                 case 1:
                     GameSettings.lives[j] = 1;
@@ -307,7 +307,7 @@ public class SettingManager : MonoBehaviour
             switch (speedDropdowns[j].value)
             {
                 case 0:
-                    GameSettings.speedValues[j] = 5.0f;
+                    GameSettings.speedValues[j] = j == 0 ? 3.0f : -1;
                     break;
                 case 1:
                     GameSettings.speedValues[j] = 3.0f;

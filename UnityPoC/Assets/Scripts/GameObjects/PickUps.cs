@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -115,8 +116,13 @@ public class PickUps : MonoBehaviour
 	{
 		pickUpMask = new CollisionUtil.Mask ().addLayer ("Player");
 
-		//Get the game objects from the game board
-		candice = GameObject.Find ("Candice").GetComponent<MainPlayer> ();
+        //Get the game objects from the game board
+        try
+        {
+            candice = GameObject.Find("Candice").GetComponent<MainPlayer>();
+        }
+        catch (Exception ex) { }
+
 		scoreText = GameObject.Find ("ScoreText");
 		livesText = GameObject.Find ("LivesText");
 

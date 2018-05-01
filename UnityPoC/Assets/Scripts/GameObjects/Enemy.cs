@@ -18,8 +18,10 @@ public abstract class Enemy : Character
         if (PlayerPrefs.GetInt("modding") == 1)
         {
 
-            lives = GameSettings.lives[modValue];
-            speed = GameSettings.speedValues[modValue];
+            if (GameSettings.lives[modValue] > 0)
+                lives = GameSettings.lives[modValue];
+            if (GameSettings.speedValues[modValue] > 0.0f)
+                speed = GameSettings.speedValues[modValue];
             if (GameSettings.shotTypes[modValue] != null)
             {
 
