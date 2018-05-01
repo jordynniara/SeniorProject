@@ -448,10 +448,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1842165993768314, guid: 8dde9922da08848128dab0a54ae7800a, type: 2}
-      propertyPath: m_Name
-      value: LevelText
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8dde9922da08848128dab0a54ae7800a, type: 2}
   m_IsPrefabParent: 0
@@ -575,7 +571,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: df856cdb9110140419b5d535c1a57636, type: 2}
+  - {fileID: 2100000, guid: 944e0f2f3fa144416ac5be1a8e188dbc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -691,15 +687,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1007477511692070, guid: f3547a26a25fc48c29e742ad09e63f08, type: 2}
-      propertyPath: m_Name
-      value: LivesText
-      objectReference: {fileID: 0}
-    - target: {fileID: 102183917743645352, guid: f3547a26a25fc48c29e742ad09e63f08,
-        type: 2}
-      propertyPath: m_Text
-      value: "x \n"
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3547a26a25fc48c29e742ad09e63f08, type: 2}
   m_IsPrefabParent: 0
@@ -808,10 +795,6 @@ Prefab:
     - target: {fileID: 4214420661217488, guid: 006f03da21b1140568f6dccea7d66583, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1294197876624360, guid: 006f03da21b1140568f6dccea7d66583, type: 2}
-      propertyPath: m_Name
-      value: ScoreText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 006f03da21b1140568f6dccea7d66583, type: 2}

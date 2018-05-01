@@ -2,6 +2,7 @@ IAN 500
 Pat 150
 abc 150
 kas 150
+jns 110
 dad 90
 jns 40
 jns 30

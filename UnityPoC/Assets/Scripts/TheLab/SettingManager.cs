@@ -337,6 +337,7 @@ public class SettingManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        saveSuccess = false;
     }
 
     // Update is called once per frame
