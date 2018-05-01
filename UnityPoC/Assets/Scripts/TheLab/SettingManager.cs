@@ -10,6 +10,7 @@ public class SettingManager : MonoBehaviour
 {
 
     public static bool changeNumLives = true;
+    public static bool saveSuccess = false;
 
     public List<Dropdown> speedDropdowns;
     public List<Dropdown> shootStyleDropdown;
@@ -62,6 +63,7 @@ public class SettingManager : MonoBehaviour
                 GameSettings.background.Add(newBackground);
                 break;
         }
+        saveSuccess = false;
     }
 
     public void OnSpriteChange()
@@ -158,6 +160,7 @@ public class SettingManager : MonoBehaviour
                 break;
         }
         Debug.Log(newSprite);
+        saveSuccess = false;
     }
 
     public void OnMusicChange()
@@ -186,13 +189,14 @@ public class SettingManager : MonoBehaviour
 
         }
         Debug.Log(clip);
+        saveSuccess = false;
     }
 
     public void OnSpeedChange(int which)
     {
         GameSettings.speedSelections[which] = speedDropdowns[which].value;
 
-
+        saveSuccess = false;
     }
 
     public void OnShootStyleChange(int which)
@@ -259,11 +263,14 @@ public class SettingManager : MonoBehaviour
             listControls[which].dropdownEntries.interactable = true;
 
         }
+
+        saveSuccess = false;
     }
 
     public void OnLivesChange(int which)
     {
         GameSettings.lives[which] = livesDropdown[which].value;
+        saveSuccess = false;
     }
 
     public void ExitMethod()
@@ -324,6 +331,7 @@ public class SettingManager : MonoBehaviour
             }
         }
         PlayerPrefs.Save();
+        saveSuccess = true;
     }
 
     // Use this for initialization
@@ -371,7 +379,7 @@ public class SettingManager : MonoBehaviour
             return;
         }
         GameSettings.playerShootStyle.bulletDefs.Add(new Shoot.BulletDef(offset, direction, speed, null));
-
+        saveSuccess = false;
     }
 
     public void selectCharacter(Dropdown characterDD)

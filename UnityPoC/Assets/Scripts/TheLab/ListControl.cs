@@ -54,7 +54,6 @@ public class ListControl : MonoBehaviour
         {
             dropdownEntries.interactable = false;
         }
-
     }
 
     public void editBullet(Dropdown reactiv)
@@ -93,6 +92,7 @@ public class ListControl : MonoBehaviour
         bulletEntries[dropdownEntries.value].bullet.speed = float.Parse(speedField.text);
         dropdownEntries.options[dropdownEntries.value].text = bulletEntries[dropdownEntries.value].name;
         dropdownEntries.RefreshShownValue();
+        SettingManager.saveSuccess = false;
     }
 
     public void okChanges(Dropdown reactiv)
@@ -103,6 +103,7 @@ public class ListControl : MonoBehaviour
         bulletEditor.gameObject.SetActive(false);
         dropdownEntries.interactable = !bulletEditor.gameObject.activeInHierarchy && bulletEntries.Count > 0;
         reactiv.interactable = true;
+        SettingManager.saveSuccess = false;
     }
 
     public void validateName(InputField src)
