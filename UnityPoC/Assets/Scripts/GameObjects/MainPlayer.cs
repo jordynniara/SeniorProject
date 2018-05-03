@@ -23,8 +23,10 @@ public class MainPlayer : Character
         //set mods
         if (PlayerPrefs.GetInt("modding") == 1)
         {
-            lives = GameSettings.lives[0];
-            speed = GameSettings.speedValues[0];
+            if (GameSettings.lives[0] > 0)
+                lives = GameSettings.lives[0];
+            if (GameSettings.speedValues[0] > 0.0f)
+                speed = GameSettings.speedValues[0];
             if (GameSettings.shotTypes[0] != null)
             {
                 

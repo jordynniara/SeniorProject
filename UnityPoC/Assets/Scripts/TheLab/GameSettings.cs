@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameSettings : MonoBehaviour {
 
-	public static int[] speedSelections = new int[6];
-    public static float[] speedValues =  new float[6];
+    public static int[] speedSelections = new int[6];
+    public static float[] speedValues = { -1, -1, -1, -1, -1, -1 };
     
-	public static int[] lives = new int[6];
-	public Sprite sprite;
+	public static int[] lives = { -1, -1, -1, -1, -1, -1 };
+    public Sprite sprite;
 	public static List<AudioClip> music = new List<AudioClip>();
     public static Shoot playerShootStyle;
 	public static List<Sprite> background = new List<Sprite>();

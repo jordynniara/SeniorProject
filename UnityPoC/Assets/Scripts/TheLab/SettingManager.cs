@@ -287,6 +287,8 @@ public class SettingManager : MonoBehaviour
         
         for (int j = 0; j < listControls.Count; j++)
         {
+            if (j == 0)
+                changeNumLives = true;
             switch (livesDropdown[j].value)
             {
                 case 0:
