@@ -1770,12 +1770,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &421802223 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114490079262856404, guid: 5659512e3c9d0a548b85c4c9e60b611d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1561943395}
-  m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &421802225 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114577571739748162, guid: 5659512e3c9d0a548b85c4c9e60b611d,
@@ -7644,7 +7638,7 @@ Prefab:
         type: 2}
       propertyPath: dropdownEntries
       value: 
-      objectReference: {fileID: 421802223}
+      objectReference: {fileID: 1876842373}
     - target: {fileID: 114305874959288946, guid: 5659512e3c9d0a548b85c4c9e60b611d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -7658,6 +7652,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5659512e3c9d0a548b85c4c9e60b611d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1876842373 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114490079262856404, guid: 5659512e3c9d0a548b85c4c9e60b611d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876842372}
+  m_Script: {fileID: 853051423, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1887987658
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114865769259539950}
   - component: {fileID: 111658858752123904}
   m_Layer: 8
-  m_Name: Candice
+  m_Name: Jay
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   bulletSpeed: 10
   shootStyle: {fileID: 114865769259539950}
   livesText: {fileID: 1007477511692070, guid: f3547a26a25fc48c29e742ad09e63f08, type: 2}
+  infinityText: {fileID: 0}
   gameEnder: {fileID: 0}
   bulletType: {fileID: 1062064615338292, guid: ec2fb558c4d3a41ffbfee4590ee35fd6, type: 2}
 --- !u!114 &114865769259539950
