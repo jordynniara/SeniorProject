@@ -14,6 +14,7 @@ public class BodyChanger : MonoBehaviour {
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = GameSettings.bodyIcon[GameSettings.bodyIcon.Count - 1];
                     Vector3 scale = new Vector3(5f, 5f, 1f);
                     transform.localScale = scale;
+                    
                 }
 			}
 			catch  (Exception e)  {
