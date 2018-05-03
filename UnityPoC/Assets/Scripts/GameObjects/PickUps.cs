@@ -42,7 +42,7 @@ public class PickUps : MonoBehaviour
 			type = t;
 		}
 
-		public PickUpCountdown (MainPlayer c)
+		public PickUpCountdown (MainPlayer j)
 		{
 			jay = j;
 		}
@@ -119,7 +119,7 @@ public class PickUps : MonoBehaviour
         //Get the game objects from the game board
         try
         {
-            jay = GameObject.Find("jay").GetComponent<MainPlayer>();
+            jay = GameObject.Find("Jay").GetComponent<MainPlayer>();
         }
         catch (Exception ex) { }
 
