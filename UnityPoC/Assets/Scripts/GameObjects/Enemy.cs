@@ -21,7 +21,7 @@ public abstract class Enemy : Character
             if (GameSettings.lives[modValue] > 0)
                 lives = GameSettings.lives[modValue];
             if (GameSettings.speedValues[modValue] > 0.0f)
-                speed = GameSettings.speedValues[modValue] / 1.5f;
+                speed = GameSettings.speedValues[modValue];
             if (GameSettings.shotTypes[modValue] != null)
             {
 

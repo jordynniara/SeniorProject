@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 2
-  speed: 2
+  speed: 5
   bulletSpeed: 5
   shootStyle: {fileID: 114652121175389070}
   scoreValue: 20

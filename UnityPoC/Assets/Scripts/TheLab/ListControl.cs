@@ -39,8 +39,8 @@ public class ListControl : MonoBehaviour
         if (dropdownEntries.options.Count > 0 && dropdownEntries.value != -1)
         {
             dropdownEntries.Hide();
-            Debug.Log(dropdownEntries.options.Count);
-            Debug.Log(dropdownEntries.value);
+            //Debug.Log(dropdownEntries.options.Count);
+            //Debug.Log(dropdownEntries.value);
             bulletEntries.RemoveAt(dropdownEntries.value);
             dropdownEntries.options.RemoveAt(dropdownEntries.value);
             if (dropdownEntries.value >= dropdownEntries.options.Count)
