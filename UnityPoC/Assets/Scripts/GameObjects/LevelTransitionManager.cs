@@ -8,18 +8,19 @@ public class LevelTransitionManager : MonoBehaviour {
     public float lvlStartDelay = 3f;
 
     public GameObject lvlLabel; //text on screen showing level number
-
+    //public List<Spawn> spawns;
 
     //flag on whether or not level is running
     //Note: Level can be running while spawning is not
     public static bool levelRunning;
+    public static int lvlNum = 0;//current level number
 	
 	void Start () {
         //get the label
         lvlLabel = GameObject.Find("LevelText");
 
         //init level number
-        Spawn.lvlNum = 0;
+        lvlNum = 0;
 
         //level isn't running at game start
         levelRunning = false;
@@ -36,6 +37,27 @@ public class LevelTransitionManager : MonoBehaviour {
         {
             TransitionLevel();
         }
+        if (Spawn.numEnemiesSpawned >= Spawn.maxEnemies)
+        {
+            //Stop spawning after so many enemies are created
+            Spawn.spawnEnabled = false;
+
+            //Stop level after all enemies are destroyed
+            if (Spawn.numEnemiesSpawned == Spawn.numEnemiesDestroyed)
+            {
+                levelRunning = false;
+
+                //Decrease spawn rate after every 1 levels
+                if (lvlNum % 1 == 0)
+                {
+                    Spawn [] spawns = GetComponents<Spawn>();
+                    foreach(Spawn s in spawns)
+                    {
+                    s.DecreaseSpawnInterval();
+                    }
+                }
+            }
+        }
 	}
 
 
@@ -45,10 +67,10 @@ public class LevelTransitionManager : MonoBehaviour {
         Spawn.spawnEnabled = false;
 
         //increase level number
-        Spawn.lvlNum++;
+        lvlNum++;
 
         //display label
-        lvlLabel.GetComponent<TextMesh>().text = "LEVEL" + Spawn.lvlNum;
+        lvlLabel.GetComponent<TextMesh>().text = "LEVEL" + lvlNum;
         lvlLabel.SetActive(true);
 
         //set level running again

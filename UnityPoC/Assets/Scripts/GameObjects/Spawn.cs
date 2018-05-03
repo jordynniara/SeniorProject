@@ -7,9 +7,10 @@ public class Spawn : MonoBehaviour
 
     public static int numEnemiesDestroyed = 0;//number of enemies destroyed
     public static int numEnemiesSpawned = 0;//number of of enemies spawned
-    public static int lvlNum = 0;//current level number
+    public static int maxEnemies = 5; //max number enemies per level => increase w/ level
 
-    public bool isPickup;
+    [SerializeField]
+    private bool isPickup;
 
     //prefabs to be spawned
     public List<GameObject> prefabs;
@@ -17,6 +18,7 @@ public class Spawn : MonoBehaviour
     private float nextSpawn = 0f; //time til next spawn
     public float spawnRate; //num sec between spawn
     public float minSpawnRate; //min num sec between spawns
+    public float decSpawnFrac; //frac by which to decrease spawn interval
     public static bool spawnEnabled = true; //flag to enable and disable spawning
 
     // the range of X enemies will be spawned
@@ -58,44 +60,30 @@ public class Spawn : MonoBehaviour
 
             // only applies to enemies
             if(!isPickup)
+            {
                 numEnemiesSpawned++;
+            }
+                
         }
 
     }
 
     public void DecreaseSpawnInterval()
     {
+        //only applies to enemies
+        if (isPickup) return;
+
 
         if (spawnRate > minSpawnRate) //Change spawn rate to fraction of what it was
-            spawnRate *= 0.8f;
+            spawnRate *= decSpawnFrac;
         else //Make sure spawn rate stays above minimum
             spawnRate = minSpawnRate;
+        maxEnemies += 5; //add 5 additional enemies per level
     }
 
     public void Update()
     {
         SpawnEnemy();
-            
-        //Only 20 enemies per level
-        if (numEnemiesSpawned >= 20)
-        {
-            //Stop spawning after so many enemies are created
-            spawnEnabled = false;
-
-            //Stop level after all enemies are destroyed
-            if (numEnemiesSpawned == numEnemiesDestroyed)
-            {
-                LevelTransitionManager.levelRunning = false;
-
-                //Decrease spawn rate after every levels
-                if (lvlNum % 1 == 0)
-                {
-                    //only applies to enemies
-                    if (!isPickup)
-                        DecreaseSpawnInterval();
-                }
-            }
-        }
     }
 
 }

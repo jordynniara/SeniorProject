@@ -6,7 +6,7 @@ using UnityEngine;
 public class PickUps : MonoBehaviour
 {
 
-	private MainPlayer candice;
+	private MainPlayer jay;
 	private GameObject livesText;
 	//text on screen showing lives left
 	private GameObject scoreText;
@@ -32,7 +32,7 @@ public class PickUps : MonoBehaviour
 		//time based ability last 5sec
 		public int type;
 		//the type of pickup it is
-		private MainPlayer candice;
+		private MainPlayer jay;
 		public float destroyTimer = 4f;
 		//pickups only stay on screen for 5 sec;
 		public bool destroyTimerActive = false;
@@ -44,7 +44,7 @@ public class PickUps : MonoBehaviour
 
 		public PickUpCountdown (MainPlayer c)
 		{
-			candice = c;
+			jay = j;
 		}
 
 		//countdown for if pickup isn't picked up
@@ -100,12 +100,12 @@ public class PickUps : MonoBehaviour
 		private void revertShoot (int div)
 		{
 			//get original number of bullets - that's where it will start
-			int startIndex = candice.shootStyle.bulletDefs.Count / div;
+			int startIndex = jay.shootStyle.bulletDefs.Count / div;
 
 			//get the number of bullets to remove
 			int count = (div == 2) ? startIndex : startIndex * 2; 
 			//remove bullets
-			candice.shootStyle.bulletDefs.RemoveRange (startIndex, count); 
+			jay.shootStyle.bulletDefs.RemoveRange (startIndex, count); 
 
 			abilityTimerActive = false;
 		}
@@ -119,14 +119,14 @@ public class PickUps : MonoBehaviour
         //Get the game objects from the game board
         try
         {
-            candice = GameObject.Find("Candice").GetComponent<MainPlayer>();
+            jay = GameObject.Find("jay").GetComponent<MainPlayer>();
         }
         catch (Exception ex) { }
 
 		scoreText = GameObject.Find ("ScoreText");
 		livesText = GameObject.Find ("LivesText");
 
-		countdown = new PickUpCountdown (candice);
+		countdown = new PickUpCountdown (jay);
 		countdown.destroyTimerActive = true;
 
 	}
@@ -207,8 +207,8 @@ public class PickUps : MonoBehaviour
 
 				//get the current lives, increase and display
 				if (SettingManager.changeNumLives) {
-					candice.lives++;
-					livesText.GetComponent<TextMesh> ().text = "x" + candice.lives;
+					jay.lives++;
+					livesText.GetComponent<TextMesh> ().text = "x" + jay.lives;
 				} 
 				else {
 					livesText.GetComponent<TextMesh> ().text = "x";
@@ -239,10 +239,10 @@ public class PickUps : MonoBehaviour
 			//create new bullet definition
 			Shoot.BulletDef bulletDef = new Shoot.BulletDef ((new Vector2 (.2f, 0f)),
 				                                     (direction - degreeChange), //angle bullet 30 degrees from the last
-				                                     candice.bulletSpeed,
+				                                     jay.bulletSpeed,
 				                                     oldStyle.bulletDefs [0].bullet);
 			//add new bullet definition
-			candice.shootStyle.bulletDefs.Add (bulletDef);
+			jay.shootStyle.bulletDefs.Add (bulletDef);
 
 			//for next angling
 			degreeChange *= -1;
