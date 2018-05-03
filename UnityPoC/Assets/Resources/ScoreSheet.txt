@@ -1,8 +1,10 @@
 IAN 500
-Pat 150
-abc 150
 kas 150
+abc 150
+Pat 150
+jdb 130
 jns 110
 dad 90
 jns 40
+jdb 30
 jns 30

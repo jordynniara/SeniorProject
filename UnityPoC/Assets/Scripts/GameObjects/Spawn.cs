@@ -81,7 +81,13 @@ public class Spawn : MonoBehaviour
         maxEnemies += 5; //add 5 additional enemies per level
     }
 
-    public void Update()
+	public void Start()
+	{
+        numEnemiesDestroyed = 0;
+        numEnemiesSpawned = 0;
+        maxEnemies = 5;
+	}
+	public void Update()
     {
         SpawnEnemy();
     }

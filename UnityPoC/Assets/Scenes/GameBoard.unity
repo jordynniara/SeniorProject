@@ -194,7 +194,7 @@ Prefab:
     - target: {fileID: 114271179683303686, guid: 83ab211ac1f6a485f95f666e27abc0b1,
         type: 2}
       propertyPath: lives
-      value: 5000
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 61600113518591310, guid: 83ab211ac1f6a485f95f666e27abc0b1,
         type: 2}
