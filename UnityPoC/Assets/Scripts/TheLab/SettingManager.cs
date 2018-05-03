@@ -36,6 +36,7 @@ public class SettingManager : MonoBehaviour
         musicDropdown.onValueChanged.AddListener(delegate { OnMusicChange(); });
         spriteDropdown.onValueChanged.AddListener(delegate { OnSpriteChange(); });
         backgroundDropdown.onValueChanged.AddListener(delegate { OnBackgroundChange(); });
+        
 
     }
 
@@ -195,6 +196,7 @@ public class SettingManager : MonoBehaviour
     public void OnSpeedChange(int which)
     {
         GameSettings.speedSelections[which] = speedDropdowns[which].value;
+       
 
         saveSuccess = false;
     }
@@ -205,6 +207,7 @@ public class SettingManager : MonoBehaviour
         List<string> options = new List<string>();
         switch (shootStyleDropdown[which].value)
         {
+            
             case 1:
                 {
                     BulletEntry be = new BulletEntry();
@@ -256,13 +259,12 @@ public class SettingManager : MonoBehaviour
         for (int i = 0; i < bullets.Count; i++)
         {
             listControls[which].bulletEntries = bullets;
-
-            listControls[which].dropdownEntries.ClearOptions();
-            listControls[which].dropdownEntries.AddOptions(options);
-            listControls[which].dropdownEntries.RefreshShownValue();
-            listControls[which].dropdownEntries.interactable = true;
-
         }
+        listControls[which].dropdownEntries.ClearOptions();
+        listControls[which].dropdownEntries.AddOptions(options);
+        listControls[which].dropdownEntries.value = 0;
+        listControls[which].dropdownEntries.RefreshShownValue();
+        listControls[which].dropdownEntries.interactable = listControls[which].dropdownEntries.options.Count > 0;
 
         saveSuccess = false;
     }
