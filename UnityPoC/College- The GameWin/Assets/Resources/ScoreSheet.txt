@@ -3,4 +3,5 @@ aaa 560
 abc 400
 zzz 320
 aaa 50
+b 50
 tts 30
