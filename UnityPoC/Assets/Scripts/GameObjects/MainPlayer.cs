@@ -18,10 +18,12 @@ public class MainPlayer : Character
   
     //initialization
 	void Start () {
-        
+
 
         //set mods
-        if (PlayerPrefs.GetInt("modding") == 1)
+        int modding = PlayerPrefs.GetInt("modding");
+        
+        if (modding == 1)
         {
             if (GameSettings.lives[0] > 0)
                 lives = GameSettings.lives[0];
@@ -38,6 +40,9 @@ public class MainPlayer : Character
                     shootStyle.bulletDefs.Add(bd);
                 }
             }
+        } else
+        {
+            SettingManager.changeNumLives = true;
         }
 
         livesText = GameObject.Find("LivesText");
