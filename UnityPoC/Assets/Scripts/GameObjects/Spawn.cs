@@ -14,7 +14,6 @@ public class Spawn : MonoBehaviour
 
     //prefabs to be spawned
     public List<GameObject> prefabs;
-    
     private float nextSpawn = Time.time; //time til next spawn
     public float spawnRate; //num sec between spawn
     public float minSpawnRate; //min num sec between spawns
@@ -87,7 +86,6 @@ public class Spawn : MonoBehaviour
         numEnemiesSpawned = 0;
         maxEnemies = 5;
         nextSpawn = Time.time;
-
     }
 	public void Update()
     {
