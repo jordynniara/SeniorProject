@@ -40,15 +40,12 @@ public class MainPlayer : Character
                     shootStyle.bulletDefs.Add(bd);
                 }
             }
-        } else
-        {
-            SettingManager.changeNumLives = true;
         }
 
         livesText = GameObject.Find("LivesText");
 
         //set lives text
-		if (SettingManager.changeNumLives) {
+		if (SettingManager.changeNumLives || modding != 1) {
 			livesText.GetComponent<TextMesh> ().text = "x" + lives; 
 			infinityText.gameObject.SetActive (false);
 		} 
@@ -89,7 +86,8 @@ public class MainPlayer : Character
             //destroys bullet
             Destroy(col.gameObject);
 
-			if (SettingManager.changeNumLives) {
+            int modding = PlayerPrefs.GetInt("modding");
+            if (SettingManager.changeNumLives || modding != 1) {
 				lives--;
 			}
 
@@ -99,7 +97,8 @@ public class MainPlayer : Character
 
 	public override void OnDamage()
     {
-		if (SettingManager.changeNumLives) {
+        int modding = PlayerPrefs.GetInt("modding");
+        if (SettingManager.changeNumLives || modding != 1) {
 			livesText.GetComponent<TextMesh> ().text = "x" + lives;
 		}
 		else {

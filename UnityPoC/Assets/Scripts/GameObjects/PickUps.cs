@@ -205,8 +205,11 @@ public class PickUps : MonoBehaviour
 				//not timer based so can be destoryed immediately
 				Destroy (this.GetComponent<GameObject> ());
 
-				//get the current lives, increase and display
-				if (SettingManager.changeNumLives) {
+
+                    int modding = PlayerPrefs.GetInt("modding");
+
+                    //get the current lives, increase and display
+                    if (SettingManager.changeNumLives || modding  != 1) {
 					jay.lives++;
 					livesText.GetComponent<TextMesh> ().text = "x" + jay.lives;
 				} 
