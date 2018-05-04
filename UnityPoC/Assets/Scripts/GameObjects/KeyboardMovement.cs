@@ -8,8 +8,8 @@ public class KeyboardMovement : MonoBehaviour, Movement{
     //screen boundaries-should not be hard coded
     //private float MIN_Y = 0;
     //private const float MAX_Y = 0;
-    private float MIN_X = -8;
-    private float MAX_X = 8;
+    private float MIN_X = -5.82f;
+    private float MAX_X = 5.82f;
 
     public void move(float speed)
     {

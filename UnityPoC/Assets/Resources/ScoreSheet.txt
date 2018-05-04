@@ -1,10 +1,10 @@
 IAN 500
+pop 380
 pat 240
-abc 150
 Pat 150
+abc 150
 kas 150
 jdb 130
 jns 110
+kas 100
 dad 90
-jns 40
-jns 30
