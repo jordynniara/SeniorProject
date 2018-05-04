@@ -22,8 +22,8 @@ public class Spawn : MonoBehaviour
     public static bool spawnEnabled = true; //flag to enable and disable spawning
 
     // the range of X enemies will be spawned
-    private float xMin = -8f;
-    private float xMax = 8f;
+    private float xMin = -5.82f;
+    private float xMax = 5.82f;
 
     // the range of y enemies will be spawned
     private float yMin = 0f;
@@ -34,7 +34,7 @@ public class Spawn : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        if (!spawnEnabled)
+        if (!spawnEnabled && !isPickup)
         {
             //keep the time set
             nextSpawn = Time.time + spawnRate;
