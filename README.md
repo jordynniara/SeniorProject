@@ -1,6 +1,8 @@
 # SeniorProject
 ## College: The Game
 ### A vertical scrolling first person shooter that follows Candice, a computer science student at NC A&T, as she fights through the various challenges college presents.
+### See manual to for how to play the game
+### All C# scripts are located in Assets folder under scripts
 
 ## Credits
 ### Creators and Developers
