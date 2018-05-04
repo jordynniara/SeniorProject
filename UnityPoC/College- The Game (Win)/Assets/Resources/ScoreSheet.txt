@@ -1,0 +1,6 @@
+www 630
+aaa 560
+abc 400
+zzz 320
+aaa 50
+tts 30

@@ -6,5 +6,5 @@ abc 150
 kas 150
 jdb 130
 jns 110
+kid 110
 kas 100
-dad 90
